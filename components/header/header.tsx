@@ -44,8 +44,8 @@ export default function Header() {
                   </nav>
                   <div className="flex items-center gap-4">
                       <div className="hidden lg:flex items-center gap-2.5">
-                          <button className="text-sm xl:text-base xl:leading-6 font-semibold cursor-pointer">EN</button>
-                          <Globe className="h-4 w-4" />
+                          <button className="text-sm xl:text-base xl:leading-6 font-semibold cursor-pointer text-white">EN</button>
+                          <Globe className="h-4 w-4 text-white" />
                           <button className="text-sm xl:text-base xl:leading-6 font-semibold cursor-pointer">AR</button>
                       </div>
 
