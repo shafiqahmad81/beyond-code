@@ -16,7 +16,7 @@ export default function Service() {
                 <Button
                     text="Contact us"
                     icon={<ArrowRight className="h-4 w-4" />}
-                    href="#"
+                    href="/contact-us"
                 />
             </div>
         </div>

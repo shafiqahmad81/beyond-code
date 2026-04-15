@@ -30,7 +30,9 @@ export default function Footer() {
             <div className="container">
                 <div className="lg:px-27.25 pb-10 sm:pb-20 lg:pb-28.75 pt-35 sm:pt-50 lg:pt-61.5 flex flex-col sm:flex-row justify-between gap-5">
                     <div className="w-full max-w-69">
-                        <h4>Beyond Code</h4>
+                        <h4>
+                            <Link href="/">Beyond Code</Link>
+                        </h4>
                         <p className="text-white/80 mt-3 sm:mt-5">AI operational intelligence infrastructure for institutional execution and reporting automation.</p>
                     </div>
                     <div className="flex justify-between w-full max-w-140.5 gap-5">
@@ -65,8 +67,8 @@ export default function Footer() {
                 <div className="container">
                     <div className="lg:px-27.25 py-3.5 flex flex-col md:flex-row items-center justify-between gap-3">
                         <ul className="flex flex-wrap items-center gap-6 sm:gap-10">
-                            <li> <Link href="#" className="text-sm leading-3 transition-all hover:text-white/50">Privacy Policy</Link> </li>
-                            <li> <Link href="#" className="text-sm leading-3 transition-all hover:text-white/50">Terms of Use</Link> </li>
+                            <li> <Link href="/privacy-policy" className="text-sm leading-3 transition-all hover:text-white/50">Privacy Policy</Link> </li>
+                            <li> <Link href="/terms-of-use" className="text-sm leading-3 transition-all hover:text-white/50">Terms of Use</Link> </li>
                         </ul>
                         <p className="text-sm text-white font-light text-center">© 2024 Beyond Code. All rights reserved.</p>
                     </div>

@@ -31,6 +31,8 @@ export default function HeroSection() {
                 style={{ backgroundImage: `url(${heroBg.src})` }}
             > 
                 <div className="absolute inset-0 bg-linear-to-b from-black/0 to-black"></div>
+                <div className="w-12 h-12 bg-[linear-gradient(154.14deg,#FCE172_0.79%,#000000_86.61%)] rounded-full absolute top-80 md:top-153.75 left-5 md:left-107.5"></div>
+                <div className="w-15.75 h-15.75 bg-[linear-gradient(154.14deg,#664DFF_0.79%,#000000_86.61%)] rounded-full absolute top-80 md:top-115 right-5 md:right-117.5"></div>
             </div>
 
             <div className="relative">
@@ -45,28 +47,31 @@ export default function HeroSection() {
                 {/* HEADER SECTION END */}
 
                 {/* Hero Content */}
-                <div className="mx-auto max-w-245.5 pt-8 md:pt-16 xl:pt-27.25 text-center relative z-20">
-                    <h1> Operational
-                        <span className="bg-linear-to-r from-[#fa9df5] to-[#FF09F4] bg-clip-text text-transparent"> Intelligence </span> and <span className="bg-linear-to-r from-[#FCE172] to-[#ffa4fa] bg-clip-text text-transparent"> AI Systems </span> for Institutional Environments
-                    </h1>
+                <div className="container">
+                    <div className="mx-auto max-w-245.5 pt-8 md:pt-16 xl:pt-27.25 text-center relative z-20">
+                        
+                        <h1> Operational
+                            <span className="bg-linear-to-r from-[#fa9df5] to-[#FF09F4] bg-clip-text text-transparent"> Intelligence </span> and <span className="bg-linear-to-r from-[#FCE172] to-[#ffa4fa] bg-clip-text text-transparent"> AI Systems </span> for Institutional Environments
+                        </h1>
 
-                    <p className="text-lg sm:text-xl leading-7.5 font-normal text-[#B2B2B2] mt-7 max-w-224.5">
-                        Enhancing execution, reporting, and decision-making through structured intelligence systems - delivering clarity, control, and measurable operational impact.
-                    </p>
+                        <p className="text-lg sm:text-xl leading-7.5 font-normal text-[#B2B2B2] mt-7 max-w-224.5">
+                            Enhancing execution, reporting, and decision-making through structured intelligence systems - delivering clarity, control, and measurable operational impact.
+                        </p>
 
 
-                    <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-                        <div>
-                            <GradientButton 
-                                text="Request a Consultation"
-                                icon={<Headphones className="h-4 w-4" />}
+                        <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+                            <div>
+                                <GradientButton 
+                                    text="Request a Consultation"
+                                    icon={<Headphones className="h-4 w-4" />}
+                                />
+                            </div>
+                            <Button
+                                text="Explore Our Systems"
+                                icon={<ArrowRight className="h-4 w-4" />}
+                                href="#"
                             />
                         </div>
-                        <Button
-                            text="Explore Our Systems"
-                            icon={<ArrowRight className="h-4 w-4" />}
-                            href="#"
-                        />
                     </div>
                 </div>
                 <div className="container">
