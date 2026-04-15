@@ -30,12 +30,12 @@ export default function Header() {
                       <h1 className="text-2xl sm:text-[1.938rem] leading-8 font-bold">BC.</h1>
                   </Link>
 
-                  <nav className="hidden gap-5 text-sm text-white/80 lg:flex flex-wrap">
+                  <nav className="hidden gap-5 text-sm text-white lg:flex flex-wrap">
                       {navItems.map((item) => (
                           <Link
                               key={item.label}
                               href={item.href}
-                              className="text-sm xl:text-base xl:leading-6 font-semibold transition hover:text-white"
+                              className="text-sm xl:text-base xl:leading-6 font-semibold transition hover:text-white/80"
                           >
                               {item.label}
                           </Link>
