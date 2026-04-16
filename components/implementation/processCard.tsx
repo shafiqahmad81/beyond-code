@@ -11,7 +11,7 @@ export default function ProcessCard({
 }: ProcessCardProps) {
   return (
 
-    <div className="relative overflow-hidden rounded-[5px] px-4 md:px-8 pt-2 md:pt-4 pb-6 md:pb-12 group">
+    <div className="relative overflow-hidden rounded-[5px] px-4 md:px-8 pt-2 md:pt-4 pb-6 md:pb-12 group h-full">
 
       <div className="absolute inset-0 bg-[linear-gradient(180deg,#252525_0%,#050505_100%)]"></div>
 
