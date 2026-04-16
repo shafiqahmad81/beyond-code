@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import GradientButton from "../button/GradientButton";
 import CaseStudyCard from "./caseStudyCard";
@@ -11,27 +14,58 @@ export default function CaseStudySection() {
       <div className="container ">
         <div className="flex items-center justify-between flex-wrap gap-5 pb-6 md:pb-12">
           <div>
-            <h2>Pilot Program / Case Study</h2>
-            <p className="text-base sm:text-xl sm:leading-7 font-normal text-[#C1C1C1] mt-3">Institutions can start with a controlled pilot deployment to validate</p>
+            <motion.h2
+              initial={{ opacity: 0, y: 60 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.3 }}
+            >
+              Pilot Program / Case Study
+            </motion.h2>
+            <motion.p
+              className="mt-3 text-base font-normal text-[#C1C1C1] sm:text-xl sm:leading-7"
+              initial={{ opacity: 0, y: 60 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.3 }}
+            >
+              Institutions can start with a controlled pilot deployment to validate
+            </motion.p>
           </div>
           <div>
-            <GradientButton
-              text="View All"
-              icon={<ArrowRight className="h-4 w-4" />}
-              href="/case-study"
-            />
+
+            <motion.div
+              initial={{ opacity: 0, y: 60 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.3 }}
+            >
+              <GradientButton
+                text="View All"
+                icon={<ArrowRight className="h-4 w-4" />}
+                href="/case-study"
+              />
+            </motion.div>
           </div>
         </div>
         <div className="grid sm:grid-cols-3 gap-y-10 gap-x-5">
           {caseStudy?.map((item: any) => {
             return (
-              <CaseStudyCard
+
+              <motion.div
                 key={item.id}
-                image={item?.image}
-                title={item?.title}
-                description={item?.description}
-                href={`/case-study/${item?.slug}`}
-              />
+                initial={{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+                viewport={{ once: true, amount: 0.3 }}
+              >
+                <CaseStudyCard
+                  image={item?.image}
+                  title={item?.title}
+                  description={item?.description}
+                  href={`/case-study/${item?.slug}`}
+                />
+              </motion.div>
             );
           })}
         </div>

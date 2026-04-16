@@ -8,9 +8,9 @@ type Props = {
 export default function FeatureCard({ text }: Props) {
   return (
     <div
-      className="flex items-center gap-4 py-3 sm:py-7 px-4 sm:px-6 rounded-xl
+      className="flex items-center gap-3 lg:gap-4 py-2 lg:py-3 sm:py-7 px-4 lg:px-6 rounded-xl
       bg-black/30 mix-blend-normal backdrop-blur-2xl 
-     transition duration-300" style={{
+     transition duration-300 h-full" style={{
     boxShadow:
       "rgba(255, 255, 255, 0.14) 0px -50px 44px inset, rgba(255, 255, 255, 0.4) 0px 0px 5px inset, rgba(255, 255, 255, 0.69) 0px 0px 0px inset",
   }}
@@ -23,7 +23,7 @@ export default function FeatureCard({ text }: Props) {
       </div>
 
       {/* Text */}
-      <p className="text-white text-start text-base md:text-[22px] font-semibold leading-[30.8px]">
+      <p className="text-white text-start text-base lg:text-[22px] font-semibold lg:leading-[30.8px]">
         {text}
       </p>
     </div>

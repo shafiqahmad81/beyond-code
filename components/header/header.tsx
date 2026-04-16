@@ -9,19 +9,30 @@ import WithoutContentButton from "../button/withoutContentButton";
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+ 
   const navItems = [
-    { label: "About", href: "#" },
-    { label: "Why Us", href: "#" },
-    { label: "Systems", href: "#" },
-    { label: "Services", href: "#" },
-    { label: "Technology", href: "#" },
-    { label: "Process", href: "#" },
+    { label: "About", id: "about" },
+    { label: "Why Us", id: "why-us" },
+    { label: "Systems", id: "systems" },
+    { label: "Services", id: "services" },
+    { label: "Technology", id: "technology" },
+    { label: "Process", id: "process" },
     { label: "Case Study", href: "/case-study" },
     { label: "Contact", href: "/contact-us" },
   ];
 
+  const scrollToSection = (id: string) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
   return (
-    <header className="w-full  ">
+    <header className="w-full">
       <div className="mx-auto max-w-368 px-4 py-4 sm:py-6">
           <div className="rounded-full bg-[#1A1A1A] bg-blend-lighten"  >
                   <div className="flex items-center justify-between px-6 sm:px-8 xl:px-10 gap-5 py-2 sm:py-4 backdrop-blur-[10px] rounded-full" style={{boxShadow: "inset 0px 0px 5px rgba(242, 242, 242, 0.5), inset 0px 0px 0px 0px #999999, inset 2px 2px 1px -2px #B3B3B3, inset -2px -2px 1px -2px #B3B3B3, inset 3px 3px 0px -3px rgba(0, 0, 0, 0.5)"}}>
@@ -31,7 +42,7 @@ export default function Header() {
                   </Link>
 
                   <nav className="hidden gap-5 text-sm text-white lg:flex flex-wrap">
-                      {navItems.map((item) => (
+                      {/* {navItems.map((item) => (
                           <Link
                               key={item.label}
                               href={item.href}
@@ -40,7 +51,26 @@ export default function Header() {
                               {item.label}
                           </Link>
 
-                      ))}
+                      ))} */}
+                      {navItems.map((item) =>
+                            item.href ? (
+                            <Link
+                                key={item.label}
+                                href={item.href}
+                                className="text-sm font-semibold transition hover:text-white/80 xl:text-base xl:leading-6"
+                            >
+                                {item.label}
+                            </Link>
+                            ) : (
+                            <button
+                                key={item.label}
+                                onClick={() => scrollToSection(item.id!)}
+                                className="cursor-pointer text-sm font-semibold transition hover:text-white/80 xl:text-base xl:leading-6"
+                            >
+                                {item.label}
+                            </button>
+                            )
+                        )}
                   </nav>
                   <div className="flex items-center gap-4">
                       <div className="hidden lg:flex items-center gap-2.5">
@@ -75,7 +105,7 @@ export default function Header() {
           </div>
           {mobileMenuOpen && (
               <nav className="lg:hidden mt-4 flex flex-col gap-3 rounded-xl border border-white/15 bg-white/10 p-4 backdrop-blur-xl shadow-2xl">
-                  {navItems.map((item) => (
+                  {/* {navItems.map((item) => (
                       <Link
                           key={item.href}
                           href={item.href}
@@ -83,7 +113,30 @@ export default function Header() {
                       >
                           {item.label}
                       </Link>
-                  ))}
+                  ))} */}
+                    {navItems.map((item) =>
+                        item.href ? (
+                            <Link
+                            key={item.label}
+                            href={item.href}
+                            onClick={() => setMobileMenuOpen(false)}
+                            className="transition hover:text-white"
+                            >
+                            {item.label}
+                            </Link>
+                        ) : (
+                            <button
+                            key={item.label}
+                            onClick={() => {
+                                scrollToSection(item.id!);
+                                setMobileMenuOpen(false);
+                            }}
+                            className="text-left transition hover:text-white"
+                            >
+                            {item.label}
+                            </button>
+                        )
+                    )}
 
                   <GradientButton  
                       text="Request a Consultation"

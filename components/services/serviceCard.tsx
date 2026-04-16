@@ -12,7 +12,7 @@ export default function ServiceCard({
   description,
 }: ServiceCardProps) {
   return (
-    <div className="bg-[linear-gradient(180deg,#252525_0%,#050505_100%)] px-4 md:px-6 pt-4 md:pt-6 pb-7 md:pb-14 rounded-[5px]">
+    <div className="bg-[linear-gradient(180deg,#252525_0%,#050505_100%)] px-4 md:px-6 pt-4 md:pt-6 pb-7 md:pb-14 rounded-[5px] h-full">
       {/* Image (optional) */}
       {image && (
         <div className="mb-6 sm:mb-9 max-w-14 sm:max-w-18.5">

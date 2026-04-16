@@ -9,7 +9,7 @@ export default function SecurityCard({
   capabilities,
 }: SystemCardProps) {
   return (
-    <div className="relative rounded-[10px] p-px bg-[linear-gradient(270deg,#FCE172_0%,#9747FF_100%)]">
+    <div className="relative rounded-[10px] p-px bg-[linear-gradient(270deg,#FCE172_0%,#9747FF_100%)] h-full">
       <div className="rounded-[10px] bg-[#222222] h-full">
         <div className="p-5 lg:p-10 text-white">
           

@@ -51,9 +51,9 @@ export default async function Page({ params }: CaseStudyProps) {
                             <div className="w-full lg:max-w-66 space-y-2 sm:space-y-2.5">
                                 <h6 className="text-sm font-normal leading-6 text-[#4B5154]">{info?.related_tags?.title}</h6>
                                 <div className="flex items-center gap-1 flex-wrap">
-                                    {info?.related_tags?.tags?.map((item: any) => {
+                                    {info?.related_tags?.tags?.map((item: any, index: number) => {
                                         return (
-                                            <button key={item.id} className="bg-white text-[13px] leading-6 font-normal text-[#1B1B1B] rounded-full px-4 py-1 border border-[#7E7E81] cursor-pointer">{item?.name}</button>
+                                            <button key={`${item.name}-${index}`} className="bg-white text-xs sm:text-[13px] sm:leading-6 font-normal text-[#1B1B1B] rounded-full px-3 sm:px-4 py-1 border border-[#7E7E81] cursor-pointer">{item?.name}</button>
                                         );
                                     })}
                                 </div>

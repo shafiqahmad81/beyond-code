@@ -16,12 +16,12 @@ export default function LeadershipCard({
   return (
     <div className="flex flex-col">
       {/* Fixed image size */}
-      <div className="relative w-full max-w-63.25 h-75.75 mx-auto overflow-hidden">
+      <div className="relative w-full max-w-63.25 h-75.75 mx-auto overflow-hidden group">
         <Image
           src={image}
           alt={name}
           fill
-          className="object-cover"
+          className="object-cover transition-transform duration-500 group-hover:scale-105"
         />
       </div>
 

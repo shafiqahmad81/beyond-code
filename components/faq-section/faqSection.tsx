@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { Plus, Minus } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
-import { data } from "framer-motion/m";
 
 const faqs = [
     {
@@ -99,21 +98,40 @@ export default function FAQSection() {
     };
 
     return (
-        <section className="bg-black pb-7 sm:pb-14 pt-14 sm:pt-27.5">
+        <section id="faq" className="bg-black pb-7 sm:pb-14 pt-14 sm:pt-27.5">
             <div className="container">
                 <div className="mx-auto max-w-190">
-                    <h2 className="mb-6 sm:mb-10 text-center">
+
+                    <motion.h2
+                        className="mb-6 sm:mb-10 text-center"
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, ease: "easeOut" }}
+                        viewport={{ once: true, amount: 0.3 }}
+                    >
                         Frequently Asked Questions
-                    </h2>
+                    </motion.h2>
 
                     <div className="space-y-4">
                         {faqs.map((faq, index) => (
-                            <FAQItem
+
+                            <motion.div
                                 key={index}
-                                faq={faq}
-                                isOpen={openIndex === index}
-                                onClick={() => toggleFAQ(index)}
-                            />
+                                initial={{ opacity: 0, y: 50 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{
+                                    duration: 0.6,
+                                    ease: "easeOut",
+                                    delay: index * 0.1,
+                                }}
+                                viewport={{ once: true, amount: 0.3 }}
+                            >
+                                <FAQItem
+                                    faq={faq}
+                                    isOpen={openIndex === index}
+                                    onClick={() => toggleFAQ(index)}
+                                />
+                            </motion.div>
                         ))}
                     </div>
                 </div>
