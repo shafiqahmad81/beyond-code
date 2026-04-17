@@ -21,7 +21,7 @@ export default function CaseStudyCard({
   return (
     <div className="space-y-4 sm:space-y-7 flex flex-col items-center sm:items-start">
       {/* Image */}
-      <div className="w-full max-w-110 mx-auto group">
+      <Link href={href} className="w-full max-w-110 mx-auto group">
         
         <motion.div
           initial={{ opacity: 0, y: 60 }}
@@ -38,7 +38,7 @@ export default function CaseStudyCard({
             className="h-auto w-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
         </motion.div>
-      </div>
+      </Link>
 
       {/* Content */}
       <div className="text-center sm:text-start">
@@ -48,7 +48,9 @@ export default function CaseStudyCard({
           transition={{ duration: 0.5, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.3 }}
         >
-          {title}
+          <Link href={href}>
+            {title}
+          </Link>
         </motion.h5>
 
         <motion.p

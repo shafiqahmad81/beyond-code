@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import type { MouseEvent } from "react";
 import { Globe, Menu, X, Headphones } from "lucide-react";
 import { useState } from "react";
 import GradientButton from "../button/GradientButton";
@@ -11,25 +12,33 @@ export default function Header() {
 
  
   const navItems = [
-    { label: "About", id: "about" },
-    { label: "Why Us", id: "why-us" },
-    { label: "Systems", id: "systems" },
-    { label: "Services", id: "services" },
-    { label: "Technology", id: "technology" },
-    { label: "Process", id: "process" },
-    { label: "Case Study", href: "/case-study" },
-    { label: "Contact", href: "/contact-us" },
+
+    { label: "About", href: "/#about", target: "#about" },
+    { label: "Why Us", href: "/#why-us", target: "#why-us" },
+    { label: "Systems", href: "/#systems", target: "#systems" },
+    { label: "Services", href: "/#services", target: "#services" },
+    { label: "Technology", href: "/#technology", target: "#technology" },
+    { label: "Process", href: "/#process", target: "#process" },
+    { label: "Case Study", href: "/case-study", target: "#case-study" },
+    { label: "Contact", href: "/contact-us", target: "#contact-us" },
   ];
 
-  const scrollToSection = (id: string) => {
-    const section = document.getElementById(id);
+const smoothScroll = (
+  e: MouseEvent<HTMLElement>,
+  id: string
+) => {
+  if (id.startsWith("/#")) {
+    e.preventDefault();
+
+    const section = document.getElementById(id.replace("/#", ""));
     if (section) {
       section.scrollIntoView({
         behavior: "smooth",
         block: "start",
       });
     }
-  };
+  }
+};
 
   return (
     <header className="w-full">
@@ -42,16 +51,7 @@ export default function Header() {
                   </Link>
 
                   <nav className="hidden gap-5 text-sm text-white lg:flex flex-wrap">
-                      {/* {navItems.map((item) => (
-                          <Link
-                              key={item.label}
-                              href={item.href}
-                              className="text-sm xl:text-base xl:leading-6 font-semibold transition hover:text-white/80"
-                          >
-                              {item.label}
-                          </Link>
-
-                      ))} */}
+                      
                       {navItems.map((item) =>
                             item.href ? (
                             <Link
@@ -64,7 +64,7 @@ export default function Header() {
                             ) : (
                             <button
                                 key={item.label}
-                                onClick={() => scrollToSection(item.id!)}
+                                onClick={(e) => smoothScroll(e, item.target)}
                                 className="cursor-pointer text-sm font-semibold transition hover:text-white/80 xl:text-base xl:leading-6"
                             >
                                 {item.label}
@@ -105,33 +105,22 @@ export default function Header() {
           </div>
           {mobileMenuOpen && (
               <nav className="lg:hidden mt-4 flex flex-col gap-3 rounded-xl border border-white/15 bg-white/10 p-4 backdrop-blur-xl shadow-2xl">
-                  {/* {navItems.map((item) => (
-                      <Link
-                          key={item.href}
-                          href={item.href}
-                          className="transition hover:text-white"
-                      >
-                          {item.label}
-                      </Link>
-                  ))} */}
+                  
                     {navItems.map((item) =>
                         item.href ? (
                             <Link
-                            key={item.label}
-                            href={item.href}
-                            onClick={() => setMobileMenuOpen(false)}
-                            className="transition hover:text-white"
-                            >
-                            {item.label}
+                                key={item.label}
+                                href={item.href}
+                                onClick={() => setMobileMenuOpen(false)}
+                                className="transition text-white hover:text-white/80"
+                                >
+                                {item.label}
                             </Link>
                         ) : (
                             <button
                             key={item.label}
-                            onClick={() => {
-                                scrollToSection(item.id!);
-                                setMobileMenuOpen(false);
-                            }}
-                            className="text-left transition hover:text-white"
+                            onClick={(e) => smoothScroll(e, item.target)}
+                            className="text-left transition text-white hover:text-white/80"
                             >
                             {item.label}
                             </button>

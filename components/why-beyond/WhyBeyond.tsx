@@ -19,7 +19,7 @@ export default function WhyBeyond() {
                         Why Beyond Code
                     </motion.h2>
 
-                    <motion.div className="grid sm:grid-cols-3 gap-6 xl:gap-31 mt-10 lg:mt-21.75">
+                    <motion.div className="flex flex-col sm:flex-row gap-6 xl:gap-31 mt-10 lg:mt-21.75">
 
                         <motion.div
                             initial={{ opacity: 0, y: 80 }}
@@ -62,8 +62,8 @@ export default function WhyBeyond() {
                                         />
                                     </div>
                                 </div>
-                                <h5 className="mt-3 sm:mt-6 mb-2 sm:mb-5">The Real Problem</h5>
-                                <p>The issue in modern institutions is not technology - it is lack of operational intelligence.</p>
+                                <h5 className="mt-3 sm:mt-6 mb-2 sm:mb-5">Common Industry Problems</h5>
+                                <p>Digital tools without workflow change • Dashboards without governance • AI without impact • Automation without execution”</p>
                             </div>
                         </motion.div>
 
@@ -85,8 +85,8 @@ export default function WhyBeyond() {
                                         />
                                     </div>
                                 </div>
-                                <h5 className="mt-3 sm:mt-6 mb-2 sm:mb-5">The Real Problem</h5>
-                                <p>The issue in modern institutions is not technology - it is lack of operational intelligence.</p>
+                                <h5 className="mt-3 sm:mt-6 mb-2 sm:mb-5">Our Solution</h5>
+                                <p>Beyond Code builds structured intelligence systems that integrate directly into institutional operations.</p>
                             </div>
                         </motion.div>
 

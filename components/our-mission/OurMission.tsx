@@ -73,7 +73,7 @@ export default function OurMission() {
               <p className="text-base font-normal leading-[25.2px] text-[#B2B2B2] sm:text-lg">
                 Systems are designed to align with:
               </p>
-              <ul className="list-inside list-disc text-base font-normal leading-[25.2px] text-[#B2B2B2] sm:text-lg">
+              <ul className="list-inside pl-3 list-disc text-base font-normal leading-[25.2px] text-[#B2B2B2] sm:text-lg">
                 <li>Institutional governance structures</li>
                 <li>Existing operational workflows</li>
                 <li>Reporting frameworks</li>

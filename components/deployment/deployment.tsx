@@ -17,7 +17,7 @@ export default function DeploymentSection() {
     }),
   };
   return (
-    <section className="bg-black text-white py-6 sm:py-8 lg:py-14">
+    <section className=" text-white py-6 sm:py-8 lg:py-14">
       <div className="container ">
         <div className="flex flex-col md:flex-row items-center justify-between gap-10">
 
@@ -34,7 +34,7 @@ export default function DeploymentSection() {
               </motion.h2>
             </div>
 
-            <div className="divide-y divide-[#4A4A4A] space-y-3 sm:space-y-5 mt-8 sm:mt-16">
+            <div className="divide-y divide-[#4A4A4A] space-y-3 sm:space-y-5 mt-5 sm:mt-8 md:mt-16">
 
               <motion.div
                 className="pb-3 sm:pb-5 last:pb-0"

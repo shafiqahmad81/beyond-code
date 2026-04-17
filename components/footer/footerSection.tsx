@@ -13,10 +13,10 @@ export default function Footer() {
         e: MouseEvent<HTMLAnchorElement>,
         id: string
     ) => {
-        if (id.startsWith("#")) {
+        if (id.startsWith("/#")) {
             e.preventDefault();
 
-            const section = document.getElementById(id.replace("#", ""));
+            const section = document.getElementById(id.replace("/#", ""));
             if (section) {
                 section.scrollIntoView({
                     behavior: "smooth",
@@ -32,21 +32,22 @@ export default function Footer() {
                 <div className="lg:px-27.25 -mb-27.5 relative z-20">
                     <div className="bg-[linear-gradient(90deg,#FC00FF_0%,#00DBDE_100%)] py-5 lg:pl-12 px-5.5 rounded-2xl md:rounded-[30px] flex flex-col md:flex-row items-center justify-between gap-5">
                         <div className="w-full md:max-w-lg">
+                            
                             <motion.h3
-                                className="text-2xl sm:text-3xl md:text-4xl md:leading-9 font-extrabold"
-                                initial={{ opacity: 0, y: 50 }}
+                                className="text-2xl sm:text-3xl md:text-4xl md:leading-12 font-extrabold will-change-transform"
+                                initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.6, ease: "easeOut" }}
+                                transition={{ duration: 0.45 }}
                                 viewport={{ once: true, amount: 0.3 }}
                             >
                                 Transform Your Operations with Intelligence
                             </motion.h3>
 
                             <motion.button
-                                className="bg-black hover:bg-white transition-all duration-500 rounded-full px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-lg font-semibold sm:leading-5 text-white hover:text-black flex items-center gap-2 cursor-pointer mt-4 sm:mt-7 group"
-                                initial={{ opacity: 0, y: 50 }}
+                                className="bg-black hover:bg-white transition-all duration-500 rounded-full px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-lg font-semibold sm:leading-5 text-white hover:text-black flex items-center gap-5.5 cursor-pointer mt-4 sm:mt-7 group will-change-transform"
+                                initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.6, ease: "easeOut" }}
+                                transition={{ duration: 0.45, delay: 0.1 }}
                                 viewport={{ once: true, amount: 0.3 }}
                             >
                                 <span>Book for Consultation</span>
@@ -56,7 +57,7 @@ export default function Footer() {
                                 </span>
                             </motion.button>
                         </div>
-                        <div className="w-full md:max-w-102.75 flex items-center justify-center group">
+                        <div className="w-full md:max-w-102.75 group">
 
                             <motion.div
                                 initial={{ opacity: 0, y: 50 }}
@@ -129,10 +130,10 @@ export default function Footer() {
                                     }}
                                 >
                                     {[
-                                        { label: "About", href: "#about", target: "#about" },
-                                        { label: "Why Us", href: "#why-us", target: "#why-us" },
-                                        { label: "Systems", href: "#system", target: "#systems" },
-                                        { label: "Services", href: "#service", target: "#services" },
+                                        { label: "About", href: "/#about", target: "#about" },
+                                        { label: "Why Us", href: "/#why-us", target: "#why-us" },
+                                        { label: "Systems", href: "/#systems", target: "#systems" },
+                                        { label: "Services", href: "/#services", target: "#services" },
                                     ].map((item, index) => (
                                         <motion.li
                                             key={index}
@@ -183,8 +184,8 @@ export default function Footer() {
                                     }}
                                 >
                                     {[
-                                        { label: "Technology", href: "#technology", target: "#technology" },
-                                        { label: "Process", href: "#process", target: "#process" },
+                                        { label: "Technology", href: "/#technology", target: "#technology" },
+                                        { label: "Process", href: "/#process", target: "#process" },
                                         { label: "Case Study", href: "/case-study", target: null },
                                     ].map((item, index) => (
                                         <motion.li
@@ -235,8 +236,8 @@ export default function Footer() {
                                     }}
                                 >
                                     {[
-                                        { label: "Leadership", href: "#leadership", target: "#leadership" },
-                                        { label: "FAQs", href: "#faq", target: "#faq" },
+                                        { label: "Leadership", href: "/#leadership", target: "#leadership" },
+                                        { label: "FAQs", href: "/#faq", target: "#faq" },
                                     ].map((item, index) => (
                                         <motion.li
                                             key={index}
@@ -307,7 +308,7 @@ export default function Footer() {
                                 transition={{ duration: 0.5, ease: "easeOut" }}
                                 viewport={{ once: true, amount: 0.3 }}
                             >
-                                © 2024 Beyond Code. All rights reserved.
+                                © 2026 Beyond Code. All rights reserved.
                             </motion.p>
                         </div>
                     </div>

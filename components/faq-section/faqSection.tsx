@@ -98,7 +98,7 @@ export default function FAQSection() {
     };
 
     return (
-        <section id="faq" className="bg-black pb-7 sm:pb-14 pt-14 sm:pt-27.5">
+        <section id="faq" className="bg-[#050505] pb-7 sm:pb-14 pt-14 sm:pt-27.5">
             <div className="container">
                 <div className="mx-auto max-w-190">
 

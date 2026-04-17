@@ -18,7 +18,7 @@ export default function SecurityCard({
             {title}
           </h5>
 
-          <ul className="mt-2 sm:mt-5 list-disc pl-6 text-base sm:text-lg sm:leading-[25.2px] text-[#B2B2B2]">
+          <ul className="mt-2 sm:mt-5 list-disc pl-8 text-base sm:text-lg sm:leading-[25.2px] text-[#B2B2B2]">
             {capabilities.map((item, index) => (
               <li key={index}>{item}</li>
             ))}

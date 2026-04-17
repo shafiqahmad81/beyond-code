@@ -19,7 +19,7 @@ import WhyBeyond from "@/components/why-beyond/WhyBeyond";
 
 export default function HomePage() {
   return (
-    <main className=" scroll-smooth">
+    <main className=" scroll-smooth bg-[#050505]">
 
       <HeroSection />
       <OurMission />

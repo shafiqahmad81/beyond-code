@@ -24,16 +24,16 @@ export default function LeadershipSection({
   ];
 
   return (
-    <section id="leadership" className="py-7 md:py-14">
+    <section id="leadership" className="py-7 md:py-14 bg-[#050505]">
       <div className="container">
         <div className="flex flex-col lg:flex-row justify-between gap-10 relative">
-          <div
-            className="absolute -left-10 md:-left-40 top-24 w-80 md:w-134.25 h-80 md:h-132.75 bg-cover bg-top bg-no-repeat"
-            style={{ backgroundImage: `url(${leadershipBg.src})` }}
-          ></div>
+          
+          <div className="absolute -left-10 md:-left-40 top-40 w-80 md:w-134.25 h-80 md:h-115 opacity-30 blur-[90px]">
+            <div className="w-full max-w-105 h-105 bg-[#05E388] absolute top-0 right-0 mix-blend-luminosity rounded-full"></div>
+            <div className="w-full max-w-105 h-105 bg-[#00D1FF] absolute bottom-0 left-0 mix-blend-luminosity rounded-full"></div>
+          </div>
 
           <div className="w-full lg:max-w-93 relative z-20">
-            {/* <h2 className="mb-3 sm:mb-5">Leadership</h2> */}
             <motion.h2
               className="mb-3 sm:mb-5"
               initial={{ opacity: 0, y: 40 }}

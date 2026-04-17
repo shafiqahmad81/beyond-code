@@ -39,10 +39,11 @@ export default function OurCore() {
         </div>
 
         <div className="relative flex flex-col gap-5">
-          <div
-            className="absolute top-[66%] left-1/2 right-0 z-30 h-75 w-75 -translate-x-1/2 -translate-y-1/2 bg-cover bg-top bg-no-repeat sm:top-[63%] sm:h-135.25 sm:w-136.75"
-            style={{ backgroundImage: `url(${ourCoreBg.src})` }}
-          ></div>
+
+          <div className="absolute top-[65%] left-1/2 -translate-y-1/2 -translate-x-1/2 w-80 sm:w-130 md:w-136 h-75 sm:h-130 md:h-135 opacity-30 blur-[112px] sm:rotate-30 z-20">
+              <div className="w-full max-w-106 h-105 bg-[#FCE172] absolute top-0 right-0 mix-blend-saturation rounded-full"></div>
+              <div className="w-full max-w-106 h-105 bg-[#FF09F4] absolute bottom-0 left-0 mix-blend-saturation rounded-full"></div>
+          </div>
 
           <div className="grid gap-5 sm:grid-cols-2">
             
@@ -98,7 +99,7 @@ export default function OurCore() {
                 impact={[
                   "80% faster report preparation",
                   "85% reduction in manual reporting work",
-                  "Up to 15× faster report generation",
+                  `Up to <span class="text-white">15× faster report generation</span>`,
                 ]}
               />
             </motion.div>
@@ -126,7 +127,7 @@ export default function OurCore() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.7, delay: 0.1 }}
                     viewport={{ once: true, amount: 0.3 }}
-                    className="w-full sm:max-w-148.75"
+                    className="w-full sm:max-w-147"
                   >
                     <h2>Institutional Impact</h2>
                     <h3 className="mt-7.5 text-xl font-bold sm:text-2xl md:leading-10 lg:text-[30px]">
@@ -138,7 +139,7 @@ export default function OurCore() {
                       Real-time operational insight
                     </p>
                     <h5 className="mt-7.5">Results</h5>
-                    <ul className="mt-5 list-disc pl-6 text-base text-[#C1C1C1] lg:text-[22px] lg:leading-8">
+                    <ul className="mt-5 list-disc pl-9 text-base text-[#C1C1C1] lg:text-[22px] lg:leading-8">
                       <li>Reduced operational delays</li>
                       <li>Increased reporting accuracy</li>
                       <li>Improved institutional visibility</li>

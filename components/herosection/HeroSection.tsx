@@ -28,7 +28,7 @@ export default function HeroSection() {
             {/* Background image */}
 
             <div
-                className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40"
+                className="absolute inset-0 bg-cover bg-top bg-no-repeat opacity-40"
                 style={{ backgroundImage: `url(${heroBg.src})` }}
             >
                 <div className="absolute inset-0 bg-linear-to-b from-black/0 to-black"></div>

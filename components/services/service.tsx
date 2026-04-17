@@ -26,7 +26,7 @@ export default function Service() {
     },
     {
       image: serviceImage3,
-      title: "Automation Systems",
+      title: `Automation </br> Systems`,
       description:
         "From automated reporting to workflow automation and AI-powered assistants — built to streamline and scale operations.",
     },
@@ -40,16 +40,7 @@ export default function Service() {
   return (
     <section id="services" className="py-7 md:py-14">
       <div className="container">
-        {/* <div className="flex items-center justify-between flex-wrap gap-5 pb-6 md:pb-12">
-            <h2>Services & Expertise</h2>
-            <div>
-                <Button
-                    text="Contact us"
-                    icon={<ArrowRight className="h-4 w-4" />}
-                    href="/contact-us"
-                />
-            </div>
-        </div> */}
+        
         <motion.div
       initial={{ opacity: 0, y: 60 }}
       whileInView={{ opacity: 1, y: 0 }}

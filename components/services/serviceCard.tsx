@@ -1,4 +1,5 @@
 import Image, { StaticImageData } from "next/image";
+import TextEdtor from "../text-editor/text-editor";
 
 type ServiceCardProps = {
   image?: StaticImageData | string;
@@ -12,10 +13,17 @@ export default function ServiceCard({
   description,
 }: ServiceCardProps) {
   return (
-    <div className="bg-[linear-gradient(180deg,#252525_0%,#050505_100%)] px-4 md:px-6 pt-4 md:pt-6 pb-7 md:pb-14 rounded-[5px] h-full">
-      {/* Image (optional) */}
+    
+    <div className="relative overflow-hidden rounded-[5px] px-4 md:px-7 pt-4 md:pt-6 pb-7 md:pb-14 group h-full">
+      
+      <div className="absolute inset-0 bg-[linear-gradient(180deg,#252525_0%,#050505_100%)]"></div>
+
+      <div className="absolute inset-0 bg-[linear-gradient(180deg,#252525_100%,#050505_0%)] opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+      
+      <div className="relative z-10">
+        {/* Image (optional) */}
       {image && (
-        <div className="mb-6 sm:mb-9 max-w-14 sm:max-w-18.5">
+        <div className="mb-6 sm:mb-8 max-w-14 sm:max-w-18.5">
           <Image
             src={image}
             alt={title}
@@ -27,12 +35,13 @@ export default function ServiceCard({
       )}
 
       <h5 >
-        {title}
+        <TextEdtor description={title}/>
       </h5>
 
       <p className="mt-3 sm:mt-5 text-[#A0A0A0]">
         {description}
       </p>
+      </div>
     </div>
   );
 }
