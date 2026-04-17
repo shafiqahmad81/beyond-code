@@ -148,7 +148,7 @@ export const CaseStudyData: CaseStudyType[] = [
     },
 
     {
-        id: 1,
+        id: 2,
         title: "Integration Readiness",
         slug: "integration-readiness",
         image: caseStudyImage2,
@@ -285,7 +285,7 @@ export const CaseStudyData: CaseStudyType[] = [
     },
 
     {
-        id: 1,
+        id: 3,
         title: "Operational Impact",
         slug: "operational-impact",
         image: caseStudyImage3,
@@ -422,7 +422,7 @@ export const CaseStudyData: CaseStudyType[] = [
     },
 
     {
-        id: 1,
+        id: 4,
         title: "Automation System",
         slug: "automation-system",
         image: caseStudyImage4,
@@ -559,7 +559,7 @@ export const CaseStudyData: CaseStudyType[] = [
     },
 
     {
-        id: 1,
+        id: 5,
         title: "System Deployment",
         slug: "system-deployment",
         image: caseStudyImage5,
@@ -696,7 +696,7 @@ export const CaseStudyData: CaseStudyType[] = [
     },
 
     {
-        id: 1,
+        id: 6,
         title: "How Impact on Your Industry",
         slug: "how-impact-on-your-industry",
         image: caseStudyImage6,

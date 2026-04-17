@@ -1,8 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
-import GradientButton from "../button/GradientButton";
 import CaseStudyCard from "./caseStudyCard";
 import { CaseStudyData } from "@/data/caseStudy";
 import GradienArrowtButton from "../button/gradientArrowButton";

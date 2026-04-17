@@ -2,42 +2,17 @@
 
 import Link from "next/link";
 import type { MouseEvent } from "react";
-import { Globe, Menu, X, Headphones } from "lucide-react";
-import { useState, useEffect } from "react";
+import { Menu, X, Headphones } from "lucide-react";
+import { useState, } from "react";
 
 import GradientButton from "../button/GradientButton";
 import WithoutContentButton from "../button/withoutContentButton";
+import { GoogleTranslate } from "../googleTranslate/googleTtranslate";
 
 export default function Header() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-    const [showTranslate, setShowTranslate] = useState(false);
-
-    useEffect(() => {
-        const script = document.createElement("script");
-        script.src =
-            "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
-        script.async = true;
-        document.body.appendChild(script);
-
-        (window as any).googleTranslateElementInit = () => {
-            new (window as any).google.translate.TranslateElement(
-                {
-                    pageLanguage: "bn",
-                    includedLanguages: "en,bn",
-                    layout:
-                        (window as any).google.translate.TranslateElement.InlineLayout.SIMPLE,
-                },
-                "google_translate_element"
-            );
-        };
-    }, []);
-
-    const toggleTranslate = () => {
-        setShowTranslate((prev) => !prev);
-    };
-
+    
     const navItems = [
-
         { label: "About", href: "/#about", target: "#about" },
         { label: "Why Us", href: "/#why-us", target: "#why-us" },
         { label: "Systems", href: "/#systems", target: "#systems" },
@@ -98,18 +73,10 @@ export default function Header() {
                             )}
                         </nav>
                         <div className="flex items-center gap-4">
-                            <div className="hidden lg:flex items-center gap-2.5">
+
+                            <div className="flex items-center gap-2.5">
                                 <button className="text-sm xl:text-base xl:leading-6 font-semibold cursor-pointer text-white">EN</button>
-                                <div className="w-9 flex items-center justify-center relative">
-                                    <Globe onClick={toggleTranslate} className="h-4 sm:h-6 w-4 sm:w-6 text-white cursor-pointer" />
-                                    <div
-                                        id="google_translate_element"
-                                        className={`absolute top-10 right-0 bg-white text-black rounded shadow transition-all ${showTranslate
-                                            ? "opacity-100 visible"
-                                            : "opacity-0 invisible"
-                                            }`}
-                                    />
-                                </div>
+                                <GoogleTranslate />
                                 <button className="text-sm xl:text-base xl:leading-6 font-semibold cursor-pointer">AR</button>
                             </div>
 
@@ -166,20 +133,6 @@ export default function Header() {
                             icon={<Headphones className="h-4 w-4" />}
                         />
 
-                        <div className="mt-4 flex items-center gap-3">
-                                <button className="text-sm xl:text-base xl:leading-6 font-semibold cursor-pointer text-white">EN</button>
-                                <div className="flex items-center justify-center relative">
-                                    <Globe onClick={toggleTranslate} className="h-4 sm:h-6 w-4 sm:w-6 text-white cursor-pointer" />
-                                    <div
-                                        id="google_translate_element"
-                                        className={`absolute top-10 right-0 bg-white text-black rounded shadow transition-all ${showTranslate
-                                            ? "opacity-100 visible"
-                                            : "opacity-0 invisible"
-                                            }`}
-                                    />
-                                </div>
-                                <button className="text-sm xl:text-base xl:leading-6 font-semibold cursor-pointer">AR</button>
-                            </div>
                     </nav>
                 )}
             </div>
