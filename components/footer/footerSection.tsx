@@ -53,11 +53,9 @@ export default function Footer() {
                                 <span>Book for Consultation</span>
 
                                 
-                                <svg
-                                    className="arrow-icon-con"
+                                    <svg
+                                    className="arrow-icon-con size-7 sm:size-8.25"
                                     xmlns="http://www.w3.org/2000/svg"
-                                    width="33"
-                                    height="33"
                                     viewBox="0 0 32 32"
                                     fill="none"
                                 >

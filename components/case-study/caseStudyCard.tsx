@@ -77,11 +77,9 @@ export default function CaseStudyCard({
           className="inline-flex items-center gap-2 rounded-full bg-[#353535] hover:bg-[linear-gradient(90.45deg,#00D1FF_-368.58%,#FF09F4_40.43%,#2D7FFF_174.52%)] transition-all duration-500 py-1.5 pl-5 pr-2.5 text-sm font-semibold text-white sm:text-base sm:leading-5 group jami-link jami-link--arrowed"
         >
           <span>Learn More</span>
-          <svg
-            className="arrow-icon-case"
+            <svg
+            className="arrow-icon-case size-6"
             xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
             viewBox="0 0 32 32"
           >
             <g
