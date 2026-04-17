@@ -78,6 +78,22 @@ html {
   border-radius: 100px;
 }
 
+.goog-te-gadget img {
+    display: none !important;
+}
+
+.VIpgJd-ZVi9od-ORHb-OEVmcd {
+    opacity: 0 !important;
+    height: 0 !important;
+}
+body {
+    top: 0 !important;
+}
+
+.Toastify__toast-container {
+    z-index: 999999999 !important;
+}
+
 .jami-link {
   cursor: pointer;
   font-weight: 400;
