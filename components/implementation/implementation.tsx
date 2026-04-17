@@ -1,9 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
-import GradientButton from "../button/GradientButton";
 import ProcessCard from "./processCard";
+import GradienArrowtButton from "../button/gradientArrowButton";
 
 export default function Implementation() {
   const processes = [
@@ -60,9 +59,8 @@ export default function Implementation() {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <GradientButton
+            <GradienArrowtButton
               text="Learn More"
-              icon={<ArrowRight className="h-4 w-4" />}
             />
           </motion.div>
         </motion.div>

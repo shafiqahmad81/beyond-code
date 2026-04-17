@@ -77,3 +77,82 @@ html {
   backdrop-filter: blur(10px);
   border-radius: 100px;
 }
+
+.jami-link {
+  cursor: pointer;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.jami-link--arrowed {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  line-height: 2rem;
+}
+
+.arrow-icon {
+  background-color: #000000;
+  color: white;
+  border-radius: 50%;
+  position: relative;
+  top: -1px;
+  transition: transform 0.3s ease;
+}
+
+.arrow-icon--circle {
+  stroke-dasharray: 95;
+  stroke-dashoffset: 95;
+  transition: stroke-dashoffset 0.3s ease;
+}
+
+.jami-link--arrowed:hover .arrow-icon {
+  transform: translate3d(5px, 0, 0);
+}
+
+.jami-link--arrowed:hover .arrow-icon--circle {
+  stroke-dashoffset: 0;
+}
+
+.arrow-icon-con {
+  background-color: #ffffff;
+  color: #FC00FF;
+  border-radius: 50%;
+  position: relative;
+  top: -1px;
+  transition: transform 0.3s ease;
+}
+.arrow-icon--circle-con{
+  stroke-dasharray: 95;
+  stroke-dashoffset: 95;
+  transition: stroke-dashoffset 0.3s ease;
+}
+.jami-link--arrowed:hover .arrow-icon-con {
+  transform: translate3d(5px, 0, 0);
+}
+
+.jami-link--arrowed:hover .arrow-icon--circle-con {
+  stroke-dashoffset: 0;
+}
+.arrow-icon--case{
+  color: #5B5B5B;
+}
+.arrow-icon-case {
+  background-color: #5B5B5B;
+  border-radius: 50%;
+  position: relative;
+  top: -1px;
+  transition: transform 0.3s ease;
+}
+ .arrow-icon--circle-case{
+  stroke-dasharray: 95;
+  stroke-dashoffset: 95;
+  transition: stroke-dashoffset 0.3s ease;
+}
+.jami-link--arrowed:hover .arrow-icon-case {
+  transform: translate3d(5px, 0, 0);
+}
+
+.jami-link--arrowed:hover .arrow-icon--circle-case {
+  stroke-dashoffset: 0;
+}

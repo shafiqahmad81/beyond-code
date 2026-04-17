@@ -3,15 +3,13 @@ import { ReactNode } from "react";
 
 type GradientButtonProps = {
   text: string;
-  icon: ReactNode;
   className?: string;
   href?: string;
   onClick?: () => void;
 };
 
-export default function GradientButton({
+export default function GradienArrowtButton({
   text,
-  icon,
   className = "",
   href,
   onClick,
@@ -26,10 +24,9 @@ export default function GradientButton({
       <svg
         className="arrow-icon"
         xmlns="http://www.w3.org/2000/svg"
-        width="33"
-        height="33"
+        width="32"
+        height="32"
         viewBox="0 0 32 32"
-        fill="none"
       >
         <g
           fill="none"
@@ -38,20 +35,14 @@ export default function GradientButton({
           strokeLinejoin="round"
           strokeMiterlimit="10"
         >
-          {/* Circle */}
           <circle className="arrow-icon--circle" cx="16" cy="16" r="15.12" />
-
-          {/* Centered icon */}
-          <g transform="translate(9,8) scale(0.8)">
-            <path
-              fill="#fff"
-              stroke="#fff"
-              strokeWidth=".2"
-              d="M9 2.15a7.6 7.6 0 0 1 7.6 7.6V15a.85.85 0 0 1-.85.85H13.5a2.35 2.35 0 0 1-2.35-2.35V12a2.35 2.35 0 0 1 2.35-2.35h1.398a5.899 5.899 0 0 0-11.795 0H4.5A2.35 2.35 0 0 1 6.85 12v1.5a2.35 2.35 0 0 1-2.35 2.35H2.25A.85.85 0 0 1 1.4 15V9.75A7.6 7.6 0 0 1 9 2.15Zm4.5 9.2a.65.65 0 0 0-.65.65v1.5a.65.65 0 0 0 .65.65h1.4v-2.8zm-10.4 2.8h1.4a.65.65 0 0 0 .65-.65V12a.65.65 0 0 0-.65-.65H3.1z"
-            />
-          </g>
+          <path
+            className="arrow-icon--arrow"
+            d="M16.14 9.93L22.21 16l-6.07 6.07M8.23 16h13.98"
+          />
         </g>
       </svg>
+      
     </button>
   );
 

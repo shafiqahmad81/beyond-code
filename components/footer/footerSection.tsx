@@ -44,7 +44,7 @@ export default function Footer() {
                             </motion.h3>
 
                             <motion.button
-                                className="bg-black hover:bg-white transition-all duration-500 rounded-full px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-lg font-semibold sm:leading-5 text-white hover:text-black flex items-center gap-5.5 cursor-pointer mt-4 sm:mt-7 group will-change-transform"
+                                className="bg-black hover:bg-white transition-all duration-500 rounded-full px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-lg font-semibold sm:leading-5 text-white hover:text-black flex items-center gap-5.5 cursor-pointer mt-4 sm:mt-7 group will-change-transform jami-link jami-link--arrowed"
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.45, delay: 0.1 }}
@@ -52,9 +52,36 @@ export default function Footer() {
                             >
                                 <span>Book for Consultation</span>
 
-                                <span className="w-6 sm:w-8 h-6 sm:h-8 bg-white group-hover:bg-black rounded-full text-black group-hover:text-white flex items-center justify-center transition-transform duration-500 group-hover:-rotate-45">
-                                    <Headphones className="w-3.5 sm:w-4.5 h-3.5 sm:h-4.5" />
-                                </span>
+                                
+                                    <svg
+        className="arrow-icon-con"
+        xmlns="http://www.w3.org/2000/svg"
+        width="33"
+        height="33"
+        viewBox="0 0 32 32"
+        fill="none"
+      >
+        <g
+          fill="none"
+          stroke="red"
+          strokeWidth="1.5"
+          strokeLinejoin="round"
+          strokeMiterlimit="10"
+        >
+          {/* Circle */}
+          <circle className="arrow-icon--circle-con" cx="16" cy="16" r="15.12" />
+
+          {/* Centered icon */}
+          <g transform="translate(9,8) scale(0.8)">
+            <path
+              fill="#000000"
+              stroke="#000000"
+              strokeWidth=".2"
+              d="M9 2.15a7.6 7.6 0 0 1 7.6 7.6V15a.85.85 0 0 1-.85.85H13.5a2.35 2.35 0 0 1-2.35-2.35V12a2.35 2.35 0 0 1 2.35-2.35h1.398a5.899 5.899 0 0 0-11.795 0H4.5A2.35 2.35 0 0 1 6.85 12v1.5a2.35 2.35 0 0 1-2.35 2.35H2.25A.85.85 0 0 1 1.4 15V9.75A7.6 7.6 0 0 1 9 2.15Zm4.5 9.2a.65.65 0 0 0-.65.65v1.5a.65.65 0 0 0 .65.65h1.4v-2.8zm-10.4 2.8h1.4a.65.65 0 0 0 .65-.65V12a.65.65 0 0 0-.65-.65H3.1z"
+            />
+          </g>
+        </g>
+      </svg>
                             </motion.button>
                         </div>
                         <div className="w-full md:max-w-102.75 group">

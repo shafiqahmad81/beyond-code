@@ -5,6 +5,7 @@ import { ArrowRight } from "lucide-react";
 import GradientButton from "../button/GradientButton";
 import CaseStudyCard from "./caseStudyCard";
 import { CaseStudyData } from "@/data/caseStudy";
+import GradienArrowtButton from "../button/gradientArrowButton";
 
 export default function CaseStudySection() {
   const caseStudyData = CaseStudyData;
@@ -40,9 +41,8 @@ export default function CaseStudySection() {
               transition={{ duration: 0.6, ease: "easeOut" }}
               viewport={{ once: true, amount: 0.3 }}
             >
-              <GradientButton
+              <GradienArrowtButton
                 text="View All"
-                icon={<ArrowRight className="h-4 w-4" />}
                 href="/case-study"
               />
             </motion.div>
