@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import type { MouseEvent } from "react";
-import { Menu, X, Headphones } from "lucide-react";
+import { Menu, X, Headphones, Globe } from "lucide-react";
 import { useState, } from "react";
 
 import GradientButton from "../button/GradientButton";
@@ -76,7 +76,10 @@ export default function Header() {
 
                             <div className="flex items-center gap-2.5">
                                 <button className="text-sm xl:text-base xl:leading-6 font-semibold cursor-pointer text-white">EN</button>
-                                <GoogleTranslate />
+                                {/* <GoogleTranslate /> */}
+                                <Globe
+                                    className="h-4 sm:h-6 w-4 sm:w-6 text-white cursor-pointer"
+                                />
                                 <button className="text-sm xl:text-base xl:leading-6 font-semibold cursor-pointer">AR</button>
                             </div>
 
