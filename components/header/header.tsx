@@ -95,7 +95,7 @@ export default function Header() {
                             )}
                         </nav>
 
-                        <div className="flex items-center gap-4">
+                        <div className="flex items-center justify-between gap-4">
 
                             <div className="flex items-center gap-2.5">
                                 <button className="text-sm xl:text-base xl:leading-6 font-semibold cursor-pointer text-white">
