@@ -27,39 +27,46 @@ export default function Header() {
         { label: "Contact", href: "/contact-us", target: "#contact-us" },
     ];
 
-    // 🔥 SCROLL + ACTIVE FIX
     useEffect(() => {
-        const handleScroll = () => {
-            setScrolled(window.scrollY > 50);
+    const handleScroll = () => {
+        const scrollY = window.scrollY;
 
-            let current = "";
+        setScrolled(scrollY > 50);
 
-            navItems.forEach((item) => {
-                const id = item.target.replace("#", "");
-                const el = document.getElementById(id);
+        // ❌ top এ থাকলে active reset
+        if (scrollY < 100) {
+            setActiveSection("");
+            return;
+        }
 
-                if (!el) return;
+        let current = "";
 
-                const rect = el.getBoundingClientRect();
+        navItems.forEach((item) => {
+            const id = item.target.replace("#", "");
+            const el = document.getElementById(id);
 
-                if (
-                    rect.top <= window.innerHeight / 2 &&
-                    rect.bottom >= window.innerHeight / 2
-                ) {
-                    current = id;
-                }
-            });
+            if (!el) return;
 
-            if (current) {
-                setActiveSection(current);
+            const rect = el.getBoundingClientRect();
+
+            if (
+                rect.top <= window.innerHeight / 2 &&
+                rect.bottom >= window.innerHeight / 2
+            ) {
+                current = id;
             }
-        };
+        });
 
-        window.addEventListener("scroll", handleScroll);
-        handleScroll();
+        if (current) {
+            setActiveSection(current);
+        }
+    };
 
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+
+    return () => window.removeEventListener("scroll", handleScroll);
+}, []);
 
     // 🔥 SMOOTH SCROLL WITH OFFSET
     const smoothScroll = (e: MouseEvent<HTMLElement>, id: string) => {
