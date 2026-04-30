@@ -44,7 +44,6 @@ export default function ContactSection() {
                   >
                     <GradientButton
                       text="Book for consulation"
-                      icon={<Headphones className="h-4 w-4" />}
                     />
                   </motion.div>
                 </div>
