@@ -2,17 +2,17 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import OurMissionImage from "../../assets/img/mission.png";
+import OurMissionImage from "../../assets/img/mission-image.png";
 
 export default function OurMission() {
   return (
     <section id="about" className="bg-black py-16 text-white lg:py-32 overflow-hidden">
       <div className="container">
-        <div className="mx-auto flex max-w-254.5 flex-col items-center justify-between gap-10 md:flex-row">
+        <div className="flex flex-col items-center gap-9 md:flex-row">
           
           {/* Image - bottom to top */}
           <motion.div
-            className="relative max-w-117.25 group"
+            className="relative w-full max-w-189 group"
             initial={{ opacity: 0, y: 60 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
@@ -21,8 +21,8 @@ export default function OurMission() {
             <Image
               src={OurMissionImage}
               alt="Robot Hand"
-              width={469}
-              height={534}
+              width={756}
+              height={756}
               className="rounded-lg object-cover transition-transform duration-500 group-hover:scale-105"
             />
           </motion.div>
@@ -37,16 +37,12 @@ export default function OurMission() {
           >
             {/* Who We Are */}
             <div>
-              <h2 className="mb-3 text-2xl font-bold leading-[44.8px] sm:mb-5 md:text-[32px]">
-                Who We Are
+              <h2 className="mb-3 text-2xl font-bold md:leading-[44.8px] sm:mb-5 md:text-[32px]">
+                Built for Institutional Environments
               </h2>
               <p className="text-base font-normal leading-[25.2px] text-[#B2B2B2] sm:text-lg">
-                Beyond Code is an operational intelligence company that develops
-                <span className="font-bold">
-                  {" "}
-                  AI-powered institutional systems
-                </span>{" "}
-                designed to improve execution, reporting, and decision-making.
+                Beyond Code builds operational intelligence systems that run inside real institutions.
+                
               </p>
             </div>
 
@@ -56,12 +52,7 @@ export default function OurMission() {
                 Our Mission
               </h2>
               <p className="text-base font-normal leading-[25.2px] text-[#B2B2B2] sm:text-lg">
-                To close the gap between{" "}
-                <span className="font-bold">
-                  AI adoption and operational readiness
-                </span>{" "}
-                by building systems that integrate directly into institutional
-                workflows.
+                Close the gap between AI capability and real execution.
               </p>
             </div>
 

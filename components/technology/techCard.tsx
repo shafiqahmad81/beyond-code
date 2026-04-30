@@ -13,7 +13,7 @@ export default function TechCard({ title, items }: TechCardProps) {
     >
       <h5 className="mb-4">{title}</h5>
 
-      <ul className="list-disc pl-8 text-base sm:text-lg sm:leading-[25.2px] text-[#B2B2B2]">
+      <ul className="list-disc pl-8 text-base sm:text-lg sm:leading-[25.2px] text-[#E3E3E3]">
         {items.map((item, index) => (
           <li key={index}>{item}</li>
         ))}

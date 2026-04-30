@@ -17,7 +17,7 @@ export default function Button({
   const content = (
     <button
       onClick={onClick}
-      className="flex items-center justify-center gap-3 rounded-full bg-white px-4 sm:px-6 py-2 text-sm lg:text-lg lg:leading-5 font-semibold text-black hover:text-white cursor-pointer hover:bg-[linear-gradient(90.45deg,#00D1FF_-368.58%,#FF09F4_40.43%,#2D7FFF_174.52%)] transition-all duration-300 group jami-link jami-link--arrowed"
+      className="flex items-center justify-center gap-2.5 rounded-full bg-white px-4 sm:px-5 py-2 text-sm lg:text-lg lg:leading-5 font-semibold text-black hover:text-white cursor-pointer hover:bg-[linear-gradient(90.45deg,#00D1FF_-368.58%,#FF09F4_40.43%,#2D7FFF_174.52%)] transition-all duration-300 group jami-link jami-link--arrowed"
     >
       {text}
 

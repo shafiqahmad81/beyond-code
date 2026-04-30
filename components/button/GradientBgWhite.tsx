@@ -7,7 +7,7 @@ type GradientButtonProps = {
   onClick?: () => void;
 };
 
-export default function GradientButton({
+export default function GradientBgWhite({
   text,
   className = "",
   href,
@@ -21,18 +21,19 @@ export default function GradientButton({
       <span>{text}</span>
 
       <svg
-        className="arrow-icon size-6 sm:size-8"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 32 32"
-      >
-        <g
+          className="arrow-icon-con size-7 sm:size-8.25"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 32 32"
           fill="none"
-          stroke="#FFFFFF"
+      >
+          <g
+          fill="none"
+          stroke="#000000"
           strokeWidth="1.5"
           strokeLinejoin="round"
           strokeMiterlimit="10"
         >
-          <circle className="arrow-icon--circle" cx="16" cy="16" r="15.12" />
+          <circle className="arrow-icon--circle-con" cx="16" cy="16" r="15.12" />
           <path
             className="arrow-icon--arrow"
             d="M16.14 9.93L22.21 16l-6.07 6.07M8.23 16h13.98"
@@ -48,3 +49,4 @@ export default function GradientButton({
 
   return content;
 }
+

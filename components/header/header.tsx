@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import type { MouseEvent } from "react";
-import { Menu, X, Headphones, Globe } from "lucide-react";
+import { Menu, X, Headphones, Globe, ArrowRight } from "lucide-react";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 
@@ -68,7 +68,6 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
 }, []);
 
-    // 🔥 SMOOTH SCROLL WITH OFFSET
     const smoothScroll = (e: MouseEvent<HTMLElement>, id: string) => {
         if (id.startsWith("/#")) {
             e.preventDefault();
@@ -98,16 +97,16 @@ export default function Header() {
         <header
             className={`w-full fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out ${
                 scrolled
-                    ? "bg-[#1A1A1A]/70 backdrop-blur-lg"
+                    ? "bg-[#1A1A1A]/20 backdrop-blur-lg"
                     : "bg-transparent"
             }`}
         >
-            <div className="mx-auto max-w-368 px-4 py-4 sm:py-6">
+            <div className="mx-auto max-w-368 px-4 py-4 sm:py-6 lg:pt-8.5">
 
                 {/* HEADER DESIGN (UNCHANGED) */}
-                <div className="rounded-full bg-[#1A1A1A]/30">
+                <div className="rounded-full bg-[#1A1A1A]/20 ">
                     <div
-                        className="flex items-center justify-between px-6 sm:px-8 xl:px-10 gap-5 py-2 sm:py-4 backdrop-blur-[10px] rounded-full"
+                        className="flex items-center justify-between px-6 sm:px-8 xl:px-10 gap-5 py-2 sm:py-4 bg-transparent backdrop-blur-[10px] rounded-full"
                         style={{
                             boxShadow:
                                 "inset 0px 0px 5px rgba(242, 242, 242, 0.5), inset 0px 0px 0px 0px #999999, inset 2px 2px 1px -2px #B3B3B3, inset -2px -2px 1px -2px #B3B3B3, inset 3px 3px 0px -3px rgba(0, 0, 0, 0.5)",
@@ -178,13 +177,12 @@ export default function Header() {
                             <div className="hidden xl:block">
                                 <GradientButton
                                     text="Request a Consultation"
-                                    icon={<Headphones className="h-4 w-4" />}
                                 />
                             </div>
 
                             <div className="hidden lg:block xl:hidden">
                                 <WithoutContentButton
-                                    icon={<Headphones className="h-4 w-4" />}
+                                    icon={<ArrowRight className="h-4 w-4" />}
                                 />
                             </div>
 
@@ -247,7 +245,6 @@ export default function Header() {
 
                         <GradientButton
                             text="Request a Consultation"
-                            icon={<Headphones className="h-4 w-4" />}
                         />
                     </nav>
                 )}

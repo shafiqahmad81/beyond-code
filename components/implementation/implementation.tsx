@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import ProcessCard from "./processCard";
 import GradienArrowtButton from "../button/gradientArrowButton";
+import GradientBgWhite from "../button/GradientBgWhite";
 
 export default function Implementation() {
   const processes = [
@@ -10,27 +11,27 @@ export default function Implementation() {
       number: 1,
       title: "Diagnose",
       description:
-        "Assess workflows, reporting structures, and operational gaps.",
+        "Identify operational gaps and inefficiencies",
     },
     {
       number: 2,
       title: "Structure",
-      description: "Design governance logic and system architecture.",
+      description: "Design system logic and governance",
     },
     {
       number: 3,
       title: "Engineer",
-      description: "Develop AI systems and intelligence infrastructure.",
+      description: "Build integrations and an intelligence layer",
     },
     {
       number: 4,
       title: "Deploy",
       description:
-        "Deploy and configure systems within institutional environments.",
+        "Launch inside your environment",
     },
   ];
   return (
-    <section id="process">
+    <section id="process" className="pt-12 md:pt-25">
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 60 }}
@@ -46,7 +47,7 @@ export default function Implementation() {
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
           >
-            <h2>Implementation Process</h2>
+            <h2>How It Gets Built</h2>
             <p className="text-base sm:text-xl sm:leading-7 font-normal text-[#C1C1C1] mt-3">
               Beyond Code follows a 4-stage deployment methodology.
             </p>
@@ -59,7 +60,7 @@ export default function Implementation() {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <GradienArrowtButton
+            <GradientBgWhite
               text="Learn More"
             />
           </motion.div>

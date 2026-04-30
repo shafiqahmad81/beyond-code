@@ -22,15 +22,17 @@ export default function SystemCard({
 }: SystemCardProps) {
   return (
     <div className="relative rounded-[10px] p-px bg-[linear-gradient(270deg,#FCE172_0%,#9747FF_100%)] h-full">
-      <div className="bg-[#222222] h-full rounded-[10px]">
-        <div className="rounded-[10px] bg-black h-full ">
+      <div className="bg-black h-full rounded-[10px]">
+        <div className="rounded-[10px] bg-[#222222]/50 h-full ">
           <div className="p-5 lg:p-10 text-white">
             {/* Badge */}
             <div className="inline-block rounded-full p-px bg-[linear-gradient(270deg,#FCE172_0%,#9747FF_100%)] mb-5">
-              <div className="rounded-full bg-[#222222]">
-                <h6 className="px-4 sm:px-5 py-1 sm:py-2 text-lg sm:text-xl sm:leading-8 font-normal">
-                  {badge}
-                </h6>
+              <div className="bg-black rounded-full">
+                <div className="rounded-full bg-[#222222]/50">
+                  <h6 className="px-4 sm:px-5 py-1 sm:py-2 text-lg sm:text-xl sm:leading-8 font-normal">
+                    {badge}
+                  </h6>
+                </div>
               </div>
             </div>
 

@@ -26,7 +26,7 @@ export default function Technology() {
     },
   ];
   return (
-    <section id="technology" className="pt-7 md:pt-14 pb-20 md:pb-29.5 bg-[linear-gradient(180deg,#050505_0%,#252525_100%)]">
+    <section id="technology" className="pt-7 md:pt-14 pb-20 md:pb-29.5 bg-transparent">
       <div className="container">
 
 
@@ -35,7 +35,7 @@ export default function Technology() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.3 }}
-          className="sm:text-center max-w-108 mx-auto"
+          className="sm:text-center max-w-135.75 mx-auto"
         >
           <motion.h2
             initial={{ opacity: 0, y: 40 }}
@@ -52,14 +52,15 @@ export default function Technology() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
+            className="text-base sm:text-xl font-normal sm:leading-7"
           >
-            Beyond Code systems are built using modern AI and cloud infrastructure.
+            Systems built on modern AI and infrastructure layers
           </motion.p>
         </motion.div>
 
         <div className="grid sm:grid-cols-3 gap-5 relative mt-12 md:px-10 xl:px-63">
           
-          <div className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-80 sm:w-130 lg:w-170 h-75 sm:h-130 lg:h-170 opacity-30 blur-[90px] sm:rotate-40">
+          <div className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-80 sm:w-130 lg:w-200 h-75 sm:h-130 lg:h-170 opacity-30 blur-[90px] sm:rotate-28">
             <div className="w-full max-w-134.25 h-133 bg-[#9747FF] absolute top-0 right-0 mix-blend-saturation rounded-full"></div>
             <div className="w-full max-w-134.25 h-133 bg-[#05E388] absolute bottom-0 left-0 mix-blend-saturation rounded-full"></div>
           </div>

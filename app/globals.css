@@ -33,7 +33,7 @@ html {
     }
 
     h1 {
-        @apply text-4xl sm:text-5xl md:text-6xl lg:text-[4.375rem] lg:leading-21 tracking-[-0.01em] font-bold
+        @apply text-3xl md:text-4xl lg:text-[3.125rem] lg:leading-15 tracking-[-0.01em] font-bold
     }
 
     h2 {

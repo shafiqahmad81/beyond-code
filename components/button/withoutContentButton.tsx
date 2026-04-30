@@ -17,7 +17,7 @@ export default function WithoutContentButton({
   const content = (
     <button
       onClick={onClick}
-      className={`flex w-full items-center justify-center gap-3 rounded-full bg-[linear-gradient(115.33deg,#00D1FF_-174.52%,#FF09F4_89.43%,#2D7FFF_368.58%)] px-4 sm:px-6 py-2 text-sm lg:text-lg lg:leading-5 font-semibold text-white cursor-pointer group hover:bg-[linear-gradient(90.45deg,#00D1FF_-368.58%,#FF09F4_40.43%,#2D7FFF_174.52%)] transition-all duration-500 jami-link jami-link--arrowed ${className}`}
+      className={`flex w-full items-center justify-center gap-2.5 rounded-full bg-[linear-gradient(115.33deg,#00D1FF_-174.52%,#FF09F4_89.43%,#2D7FFF_368.58%)] px-4 sm:px-5 py-2 text-sm lg:text-lg lg:leading-5 font-semibold text-white cursor-pointer group hover:bg-[linear-gradient(90.45deg,#00D1FF_-368.58%,#FF09F4_40.43%,#2D7FFF_174.52%)] transition-all duration-500 jami-link jami-link--arrowed ${className}`}
     >
         <svg
         className="arrow-icon size-7 sm:size-8.25"
