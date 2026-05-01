@@ -124,7 +124,6 @@ export default function ContactSection() {
                   </div>
 
                   <div>
-                    {/* <h3 className="mb-4 text-2xl font-semibold">Social links</h3> */}
                     <motion.h3
                       className="mb-4 text-2xl font-semibold"
                       initial={{ opacity: 0, y: 40 }}

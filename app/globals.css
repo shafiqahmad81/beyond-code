@@ -116,6 +116,19 @@ body {
   transition: transform 0.3s ease;
 }
 
+.arrow-icon--circle-extra {
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 1.5;
+  stroke-dasharray: 95;
+  stroke-dashoffset: 95;
+  transition: stroke 0.3s ease, stroke-dashoffset 0.3s ease;
+}
+
+.jami-link--arrowed:hover .arrow-icon--circle-extra {
+  stroke-dashoffset: 0;
+}
+
 .arrow-icon--circle {
   stroke-dasharray: 95;
   stroke-dashoffset: 95;
@@ -129,6 +142,7 @@ body {
 .jami-link--arrowed:hover .arrow-icon--circle {
   stroke-dashoffset: 0;
 }
+
 
 .arrow-icon-con {
   background-color: #ffffff;

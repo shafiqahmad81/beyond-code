@@ -20,7 +20,7 @@ export default function WhyBeyond() {
                         Most Systems Fail Here
                     </motion.h2>
 
-                    <motion.div className="grid grid-cols-4 gap-8 xl:gap-17 mt-10 lg:mt-21.75">
+                    <motion.div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-8 xl:gap-17 mt-10 lg:mt-21.75">
 
                         <motion.div
                             initial={{ opacity: 0, y: 80 }}

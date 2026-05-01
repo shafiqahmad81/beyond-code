@@ -243,9 +243,11 @@ export default function Header() {
                             );
                         })}
 
-                        <GradientButton
-                            text="Request a Consultation"
-                        />
+                        <div className="w-fit">
+                            <GradientButton
+                                text="Request a Consultation"
+                            />
+                        </div>
                     </nav>
                 )}
             </div>

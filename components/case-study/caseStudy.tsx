@@ -9,7 +9,7 @@ export default function CaseStudySection() {
   const caseStudyData = CaseStudyData;
   const caseStudy = caseStudyData.slice(0, 3);
   return (
-    <section className="py-7 lg:py-14 bg-[linear-gradient(180deg,#050505_0%,#252525_100%)]">
+    <section className="py-7 lg:py-14">
       <div className="container ">
         <div className="flex items-center justify-between flex-wrap gap-5 pb-6 md:pb-12">
           <div>

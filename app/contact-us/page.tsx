@@ -6,9 +6,7 @@ export default function AboutUs() {
     return (
         <>
             <ContactSection />
-            <LeadershipSection 
-                showButton={false}
-            />
+            <LeadershipSection />
             <FAQSection />
         </>
     );

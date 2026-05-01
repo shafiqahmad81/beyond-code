@@ -47,15 +47,11 @@ export default function HeroSection() {
 
     return (
         <section className="mt-26">
-            {/* Background image */}
-
             <div
                 className="absolute inset-0 bg-cover bg-top bg-no-repeat z-20"
                 style={{ backgroundImage: `url(${heroBg.src})` }}
             >
-                {/* <div className="absolute inset-0 bg-linear-to-b from-black/0 to-black"></div> */}
-                {/* <div className="w-12 h-12 bg-[linear-gradient(154.14deg,#FCE172_0.79%,#000000_86.61%)] rounded-full absolute top-80 md:top-153.75 left-5 md:left-107.5"></div> */}
-                {/* <div className="w-15.75 h-15.75 bg-[linear-gradient(154.14deg,#664DFF_0.79%,#000000_86.61%)] rounded-full absolute top-80 md:top-115 right-5 md:right-117.5"></div> */}
+                
             </div>
             <div className="absolute top-0 left-0 right-0 h-105 bg-cover bg-top bg-no-repeat z-30"
                 style={{ backgroundImage: `url(${heroBgTop.src})` }}>
@@ -76,11 +72,25 @@ export default function HeroSection() {
                             Operational <span className="text-[#FF09F4]"> Intelligence </span>for Institutional Systems
                         </motion.h1>
 
-                        <div className="w-15.5 h-1 rounded-full bg-linear-to-r from-[#7545F3] to-[#FCE172] relative after:absolute after:top-0 after:-right-1.5 after:w-1 after:h-1 after:bg-[#ECA3C1] after:rounded-full after:content-[''] ">
+                        <motion.div
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, amount: 0.3 }}
+                            transition={{ delay: 0.2, duration: 0.7 }}
+                            className="w-15.5 h-1 rounded-full bg-linear-to-r from-[#7545F3] to-[#FCE172] relative
+                            after:absolute after:top-0 after:-right-1.5 after:w-1 after:h-1 after:bg-[#ECA3C1] after:rounded-full after:content-['']"
+                            >
+                        </motion.div>
 
-                        </div>
-
-                        <h5 className="text-[#B2B2B2]">Run your operations. Not just your reports.</h5>
+                        <motion.h5
+                            initial={{ opacity: 0, y: 80 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, amount: 0.9 }}
+                            transition={{ duration: 1.1, ease: "easeOut" }}
+                            className="text-[#B2B2B2]"
+                            >
+                            Run your operations. Not just your reports.
+                        </motion.h5>
 
                         <motion.p
                             initial={{ opacity: 0, y: 50 }}
