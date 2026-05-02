@@ -1,5 +1,7 @@
+"use client";
+
 import Link from "next/link";
-import termsData from "@/data/en.json";
+import { useTranslations } from "next-intl";
 
 /* ================= TYPES ================= */
 
@@ -18,17 +20,18 @@ type Section = {
   email?: string;
 };
 
-type TermsType = {
-  title: string;
-  lastUpdated: string;
-  intro: string[];
-  sections: Section[];
-};
-
 /* ================= COMPONENT ================= */
 
 export default function TermsPage() {
-  const terms: TermsType = termsData.terms;
+  const t = useTranslations("terms");
+
+  // JSON inside messages
+  const terms = {
+    title: t("title"),
+    lastUpdated: t("lastUpdated"),
+    intro: t.raw("intro") as string[],
+    sections: t.raw("sections") as Section[]
+  };
 
   return (
     <section className="pt-30 sm:pt-40 lg:pt-50 pb-8 sm:pb-16 lg:pb-32.5">
@@ -43,18 +46,18 @@ export default function TermsPage() {
 
             <p>{terms.lastUpdated}</p>
 
-            {terms.intro?.map((item: string, i: number) => (
+            {terms.intro?.map((item, i) => (
               <p key={i}>{item}</p>
             ))}
           </div>
 
           {/* SECTIONS */}
-          {terms.sections?.map((section: Section, i: number) => (
+          {terms.sections?.map((section, i) => (
             <div key={i}>
               <h5>{section.title}</h5>
 
               {/* CONTENT */}
-              {section.content?.map((text: string, idx: number) => (
+              {section.content?.map((text, idx) => (
                 <p key={idx} className="my-3 sm:my-4">
                   {text}
                 </p>
@@ -70,18 +73,18 @@ export default function TermsPage() {
               {/* LIST */}
               {section.list?.length ? (
                 <ul className="list-disc pl-6 mt-1">
-                  {section.list.map((item: string, idx: number) => (
+                  {section.list.map((item, idx) => (
                     <li key={idx}>{item}</li>
                   ))}
                 </ul>
               ) : null}
 
               {/* EXTRA */}
-              {section.extra?.map((ex: ExtraSection, idx: number) => (
+              {section.extra?.map((ex, idx) => (
                 <div key={idx}>
                   <p className="my-3 sm:my-4">{ex.title}</p>
                   <ul className="list-disc pl-6 mt-1">
-                    {ex.list.map((li: string, liIdx: number) => (
+                    {ex.list.map((li, liIdx) => (
                       <li key={liIdx}>{li}</li>
                     ))}
                   </ul>
@@ -91,7 +94,7 @@ export default function TermsPage() {
               {/* NOTE */}
               {section.note &&
                 (Array.isArray(section.note) ? (
-                  section.note.map((n: string, idx: number) => (
+                  section.note.map((n, idx) => (
                     <p key={idx} className="mt-3 sm:mt-4">
                       {n}
                     </p>
@@ -103,12 +106,15 @@ export default function TermsPage() {
               {/* EMAIL */}
               {section.email && (
                 <p>
-                  Email:{" "}
-                  <Link href={`mailto:${section.email}`}>
-                    {section.email}
-                  </Link>
+                    Email:{" "}
+                    <Link
+                        
+                        href={`mailto:${section.email}`}
+                    >
+                        {section.email}
+                    </Link>
                 </p>
-              )}
+            )}
             </div>
           ))}
 
