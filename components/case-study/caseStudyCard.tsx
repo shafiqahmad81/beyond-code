@@ -12,11 +12,14 @@ type CaseStudyCardProps = {
 };
 
 export default function CaseStudyCard({
+
   image,
   title,
   description,
   href,
 }: CaseStudyCardProps) {
+
+
   return (
     <div className="space-y-4 sm:space-y-7 flex flex-col items-center sm:items-start">
       {/* Image */}

@@ -1,4 +1,50 @@
 {
+  "header":[
+    {
+      "navItems": [
+        {
+          "label": "About",
+          "href": "/#about",
+          "target": "#about"
+        },
+        {
+          "label": "Why Us",
+          "href": "/#why-us",
+          "target": "#why-us"
+        },
+        {
+          "label": "Systems",
+          "href": "/#systems",
+          "target": "#systems"
+        },
+        {
+          "label": "Services",
+          "href": "/#services",
+          "target": "#services"
+        },
+        {
+          "label": "Technology",
+          "href": "/#technology",
+          "target": "#technology"
+        },
+        {
+          "label": "Process",
+          "href": "/#process",
+          "target": "#process"
+        },
+        {
+          "label": "Case Study",
+          "href": "/case-study",
+          "target": "#case-study"
+        },
+        {
+          "label": "Contact",
+          "href": "/contact-us",
+          "target": "#contact-us"
+        }
+      ]
+    }
+  ],
   "hero": {
     "title": {
       "text": "Operational Intelligence for Institutional Systems",
@@ -423,7 +469,887 @@
       "messagePlaceholder": "Tell more about your idea",
       "buttonText": "Send Message"
     }
-  }
-  
+  },
+
+
+
+
+
+"casestudy":[
+  {
+  "id": 1,
+  "title": "System capability",
+  "slug": "system-capability",
+  "image": "/system-capability.png",
+  "description": "Evaluates the system’s ability to deliver core intelligence functions, including data processing, automation...",
+  "info": {
+    "company": {
+      "title": "Company Name",
+      "name": "OpsIntel Solutions"
+    },
+    "category": {
+      "title": "Category",
+      "name": "Dashboard Design"
+    },
+    "timelines": {
+      "title": "Timelines",
+      "months": "3 Months"
+    },
+    "related_tags": {
+      "title": "Related Tags",
+      "tags": [
+        {
+          "id": 1,
+          "name": "Intelligent"
+        },
+        {
+          "id": 2,
+          "name": "Artificial"
+        },
+        {
+          "id": 3,
+          "name": "System"
+        }
+      ]
+    }
+  },
+  "overview": [
+    {
+      "id": 1,
+      "title": "Overview",
+      "description": "OpsIntel Solutions is a large enterprise organization facing challenges in operational visibility, reporting inefficiencies, and delayed decision-making due to fragmented systems and manual workflows.",
+      "image": "/overview.png"
+    }
+  ],
+  "challenge": [
+    {
+      "id": 1,
+      "title": "Challenge",
+      "sub_title": "Despite investing in digital tools, OpsIntel Solutions struggled with:",
+      "list": [
+        "Lack of real-time operational visibility",
+        "Heavy reliance on manual reporting processes",
+        "Disconnected systems across departments",
+        "Delays in executive decision-making",
+        "Inefficient data retrieval and workflow bottlenecks"
+      ],
+      "description": "These challenges limited the organization’s ability to scale efficiently and respond to operational demands."
+    }
+  ],
+  "solution": [
+    {
+      "id": 1,
+      "title": "Solution",
+      "sub_title": "A structured Operational Intelligence System was deployed to integrate workflows, automate reporting, and enable real-time decision support.",
+      "key_title": "Key Implementations",
+      "list": [
+        "Deployment of AI-powered operational intelligence assistants",
+        "Integration with ERP systems and internal databases",
+        "Automated reporting infrastructure with real-time dashboards",
+        "Workflow automation and execution tracking systems",
+        "Centralized knowledge and document intelligence system"
+      ],
+      "image": "/solution-image.png"
+    }
+  ],
+  "system_capability": [
+    {
+      "id": 1,
+      "title": "System Capability",
+      "sub_title": "The system was engineered to handle complex operational environments with:",
+      "list": [
+        "Real-time data processing and intelligence generation",
+        "Seamless integration across multiple platforms",
+        "Scalable infrastructure aligned with organizational growth",
+        "Secure deployment within internal infrastructure"
+      ]
+    }
+  ],
+  "integration_readiness": [
+    {
+      "id": 1,
+      "title": "Integration Readiness",
+      "sub_title": "The solution was fully integrated into existing infrastructure:",
+      "list": [
+        "Connected with ERP, reporting tools, and internal systems",
+        "No disruption to ongoing operations during deployment",
+        "Aligned with governance frameworks and security policies",
+        "Configured to match organizational workflows"
+      ]
+    }
+  ],
+  "operational_impact": [
+    {
+      "id": 1,
+      "title": "Operational Impact",
+      "sub_title": "Following deployment, OpsIntel Solutions achieved:",
+      "list": [
+        "60–80% faster information retrieval",
+        "Up to 85% reduction in manual reporting workload",
+        "Real-time operational visibility across departments",
+        "Significant improvement in decision-making speed",
+        "Enhanced workflow efficiency and execution tracking"
+      ],
+      "image": "/oparational-impact.png"
+    }
+  ],
+  "results": [
+    {
+      "id": 1,
+      "title": "Results",
+      "sub_title": "Improved operational efficiency and system reliability",
+      "list": [
+        "Faster and more informed executive decisions",
+        "Reduced dependency on manual processes",
+        "Scalable infrastructure supporting long-term growth"
+      ]
+    }
+  ],
+  "conclusion": [
+    {
+      "id": 1,
+      "title": "Conclusion",
+      "description": "By implementing a structured operational intelligence system, OpsIntel Solutions successfully transformed its operational model from fragmented and manual to intelligent, automated, and data-driven."
+    }
+  ]
+},
+
+{
+  "id": 2,
+  "title": "Integration Readiness",
+  "slug": "integration-readiness",
+  "image": "/integration.png",
+  "description": "Assesses how seamlessly the system can integrate with existing infrastructure, including ERP systems, databases...",
+
+  "info": {
+    "company": {
+      "title": "Company Name",
+      "name": "OpsIntel Solutions"
+    },
+    "category": {
+      "title": "Category",
+      "name": "Dashboard Design"
+    },
+    "timelines": {
+      "title": "Timelines",
+      "months": "3 Months"
+    },
+    "related_tags": {
+      "title": "Related Tags",
+      "tags": [
+        {
+          "id": 1,
+          "name": "Intelligent"
+        },
+        {
+          "id": 2,
+          "name": "Artificial"
+        },
+        {
+          "id": 3,
+          "name": "System"
+        }
+      ]
+    }
+  },
+
+  "overview": [
+    {
+      "id": 1,
+      "title": "Overview",
+      "description": "OpsIntel Solutions is a large enterprise organization facing challenges in operational visibility, reporting inefficiencies, and delayed decision-making due to fragmented systems and manual workflows.",
+      "image": "/overview.png"
+    }
+  ],
+
+  "challenge": [
+    {
+      "id": 1,
+      "title": "Challenge",
+      "sub_title": "Despite investing in digital tools, OpsIntel Solutions struggled with:",
+      "list": [
+        "Lack of real-time operational visibility",
+        "Heavy reliance on manual reporting processes",
+        "Disconnected systems across departments",
+        "Delays in executive decision-making",
+        "Inefficient data retrieval and workflow bottlenecks"
+      ],
+      "description": "These challenges limited the organization’s ability to scale efficiently and respond to operational demands."
+    }
+  ],
+
+  "solution": [
+    {
+      "id": 1,
+      "title": "Solution",
+      "sub_title": "A structured Operational Intelligence System was deployed to integrate workflows, automate reporting, and enable real-time decision support.",
+      "key_title": "Key Implementations",
+      "list": [
+        "Deployment of AI-powered operational intelligence assistants",
+        "Integration with ERP systems and internal databases",
+        "Automated reporting infrastructure with real-time dashboards",
+        "Workflow automation and execution tracking systems",
+        "Centralized knowledge and document intelligence system"
+      ],
+      "image": "/solution-image.png"
+    }
+  ],
+
+  "system_capability": [
+    {
+      "id": 1,
+      "title": "System Capability",
+      "sub_title": "The system was engineered to handle complex operational environments with:",
+      "list": [
+        "Real-time data processing and intelligence generation",
+        "Seamless integration across multiple platforms",
+        "Scalable infrastructure aligned with organizational growth",
+        "Secure deployment within internal infrastructure"
+      ]
+    }
+  ],
+
+  "integration_readiness": [
+    {
+      "id": 1,
+      "title": "Integration Readiness",
+      "sub_title": "The solution was fully integrated into existing infrastructure:",
+      "list": [
+        "Connected with ERP, reporting tools, and internal systems",
+        "No disruption to ongoing operations during deployment",
+        "Aligned with governance frameworks and security policies",
+        "Configured to match organizational workflows"
+      ]
+    }
+  ],
+
+  "operational_impact": [
+    {
+      "id": 1,
+      "title": "Operational Impact",
+      "sub_title": "Following deployment, OpsIntel Solutions achieved:",
+      "list": [
+        "60–80% faster information retrieval",
+        "Up to 85% reduction in manual reporting workload",
+        "Real-time operational visibility across departments",
+        "Significant improvement in decision-making speed",
+        "Enhanced workflow efficiency and execution tracking"
+      ],
+      "image": "/oparational-impact.png"
+    }
+  ],
+
+  "results": [
+    {
+      "id": 1,
+      "title": "Results",
+      "sub_title": "Improved operational efficiency and system reliability",
+      "list": [
+        "Faster and more informed executive decisions",
+        "Reduced dependency on manual processes",
+        "Scalable infrastructure supporting long-term growth"
+      ]
+    }
+  ],
+
+  "conclusion": [
+    {
+      "id": 1,
+      "title": "Conclusion",
+      "description": "By implementing a structured operational intelligence system, OpsIntel Solutions successfully transformed its operational model from fragmented and manual to intelligent, automated, and data-driven."
+    }
+  ]
+},
+
+  {
+  "id": 3,
+  "title": "Operational Impact",
+  "slug": "operational-impact",
+  "image": "/operational.png",
+  "description": "Measures the system’s effectiveness in improving execution, reducing manual workload, enhancing visibilit...",
+
+  "info": {
+    "company": {
+      "title": "Company Name",
+      "name": "OpsIntel Solutions"
+    },
+    "category": {
+      "title": "Category",
+      "name": "Dashboard Design"
+    },
+    "timelines": {
+      "title": "Timelines",
+      "months": "3 Months"
+    },
+    "related_tags": {
+      "title": "Related Tags",
+      "tags": [
+        {
+          "id": 1,
+          "name": "Intelligent"
+        },
+        {
+          "id": 2,
+          "name": "Artificial"
+        },
+        {
+          "id": 3,
+          "name": "System"
+        }
+      ]
+    }
+  },
+
+  "overview": [
+    {
+      "id": 1,
+      "title": "Overview",
+      "description": "OpsIntel Solutions is a large enterprise organization facing challenges in operational visibility, reporting inefficiencies, and delayed decision-making due to fragmented systems and manual workflows.",
+      "image": "/overview.png"
+    }
+  ],
+
+  "challenge": [
+    {
+      "id": 1,
+      "title": "Challenge",
+      "sub_title": "Despite investing in digital tools, OpsIntel Solutions struggled with:",
+      "list": [
+        "Lack of real-time operational visibility",
+        "Heavy reliance on manual reporting processes",
+        "Disconnected systems across departments",
+        "Delays in executive decision-making",
+        "Inefficient data retrieval and workflow bottlenecks"
+      ],
+      "description": "These challenges limited the organization’s ability to scale efficiently and respond to operational demands."
+    }
+  ],
+
+  "solution": [
+    {
+      "id": 1,
+      "title": "Solution",
+      "sub_title": "A structured Operational Intelligence System was deployed to integrate workflows, automate reporting, and enable real-time decision support.",
+      "key_title": "Key Implementations",
+      "list": [
+        "Deployment of AI-powered operational intelligence assistants",
+        "Integration with ERP systems and internal databases",
+        "Automated reporting infrastructure with real-time dashboards",
+        "Workflow automation and execution tracking systems",
+        "Centralized knowledge and document intelligence system"
+      ],
+      "image": "/solution-image.png"
+    }
+  ],
+
+  "system_capability": [
+    {
+      "id": 1,
+      "title": "System Capability",
+      "sub_title": "The system was engineered to handle complex operational environments with:",
+      "list": [
+        "Real-time data processing and intelligence generation",
+        "Seamless integration across multiple platforms",
+        "Scalable infrastructure aligned with organizational growth",
+        "Secure deployment within internal infrastructure"
+      ]
+    }
+  ],
+
+  "integration_readiness": [
+    {
+      "id": 1,
+      "title": "Integration Readiness",
+      "sub_title": "The solution was fully integrated into existing infrastructure:",
+      "list": [
+        "Connected with ERP, reporting tools, and internal systems",
+        "No disruption to ongoing operations during deployment",
+        "Aligned with governance frameworks and security policies",
+        "Configured to match organizational workflows"
+      ]
+    }
+  ],
+
+  "operational_impact": [
+    {
+      "id": 1,
+      "title": "Operational Impact",
+      "sub_title": "Following deployment, OpsIntel Solutions achieved:",
+      "list": [
+        "60–80% faster information retrieval",
+        "Up to 85% reduction in manual reporting workload",
+        "Real-time operational visibility across departments",
+        "Significant improvement in decision-making speed",
+        "Enhanced workflow efficiency and execution tracking"
+      ],
+      "image": "/oparational-impact.png"
+    }
+  ],
+
+  "results": [
+    {
+      "id": 1,
+      "title": "Results",
+      "sub_title": "Improved operational efficiency and system reliability",
+      "list": [
+        "Faster and more informed executive decisions",
+        "Reduced dependency on manual processes",
+        "Scalable infrastructure supporting long-term growth"
+      ]
+    }
+  ],
+
+  "conclusion": [
+    {
+      "id": 1,
+      "title": "Conclusion",
+      "description": "By implementing a structured operational intelligence system, OpsIntel Solutions successfully transformed its operational model from fragmented and manual to intelligent, automated, and data-driven."
+    }
+  ]
+},
+
+ {
+  "id": 4,
+  "title": "Automation System",
+  "slug": "automation-system",
+  "image": "/automation.png",
+  "description": "Evaluates the system’s ability to deliver core intelligence functions, including data processing, automation...",
+
+  "info": {
+    "company": {
+      "title": "Company Name",
+      "name": "OpsIntel Solutions"
+    },
+    "category": {
+      "title": "Category",
+      "name": "Dashboard Design"
+    },
+    "timelines": {
+      "title": "Timelines",
+      "months": "3 Months"
+    },
+    "related_tags": {
+      "title": "Related Tags",
+      "tags": [
+        {
+          "id": 1,
+          "name": "Intelligent"
+        },
+        {
+          "id": 2,
+          "name": "Artificial"
+        },
+        {
+          "id": 3,
+          "name": "System"
+        }
+      ]
+    }
+  },
+
+  "overview": [
+    {
+      "id": 1,
+      "title": "Overview",
+      "description": "OpsIntel Solutions is a large enterprise organization facing challenges in operational visibility, reporting inefficiencies, and delayed decision-making due to fragmented systems and manual workflows.",
+      "image": "/overview.png"
+    }
+  ],
+
+  "challenge": [
+    {
+      "id": 1,
+      "title": "Challenge",
+      "sub_title": "Despite investing in digital tools, OpsIntel Solutions struggled with:",
+      "list": [
+        "Lack of real-time operational visibility",
+        "Heavy reliance on manual reporting processes",
+        "Disconnected systems across departments",
+        "Delays in executive decision-making",
+        "Inefficient data retrieval and workflow bottlenecks"
+      ],
+      "description": "These challenges limited the organization’s ability to scale efficiently and respond to operational demands."
+    }
+  ],
+
+  "solution": [
+    {
+      "id": 1,
+      "title": "Solution",
+      "sub_title": "A structured Operational Intelligence System was deployed to integrate workflows, automate reporting, and enable real-time decision support.",
+      "key_title": "Key Implementations",
+      "list": [
+        "Deployment of AI-powered operational intelligence assistants",
+        "Integration with ERP systems and internal databases",
+        "Automated reporting infrastructure with real-time dashboards",
+        "Workflow automation and execution tracking systems",
+        "Centralized knowledge and document intelligence system"
+      ],
+      "image": "/solution-image.png"
+    }
+  ],
+
+  "system_capability": [
+    {
+      "id": 1,
+      "title": "System Capability",
+      "sub_title": "The system was engineered to handle complex operational environments with:",
+      "list": [
+        "Real-time data processing and intelligence generation",
+        "Seamless integration across multiple platforms",
+        "Scalable infrastructure aligned with organizational growth",
+        "Secure deployment within internal infrastructure"
+      ]
+    }
+  ],
+
+  "integration_readiness": [
+    {
+      "id": 1,
+      "title": "Integration Readiness",
+      "sub_title": "The solution was fully integrated into existing infrastructure:",
+      "list": [
+        "Connected with ERP, reporting tools, and internal systems",
+        "No disruption to ongoing operations during deployment",
+        "Aligned with governance frameworks and security policies",
+        "Configured to match organizational workflows"
+      ]
+    }
+  ],
+
+  "operational_impact": [
+    {
+      "id": 1,
+      "title": "Operational Impact",
+      "sub_title": "Following deployment, OpsIntel Solutions achieved:",
+      "list": [
+        "60–80% faster information retrieval",
+        "Up to 85% reduction in manual reporting workload",
+        "Real-time operational visibility across departments",
+        "Significant improvement in decision-making speed",
+        "Enhanced workflow efficiency and execution tracking"
+      ],
+      "image": "/oparational-impact.png"
+    }
+  ],
+
+  "results": [
+    {
+      "id": 1,
+      "title": "Results",
+      "sub_title": "Improved operational efficiency and system reliability",
+      "list": [
+        "Faster and more informed executive decisions",
+        "Reduced dependency on manual processes",
+        "Scalable infrastructure supporting long-term growth"
+      ]
+    }
+  ],
+
+  "conclusion": [
+    {
+      "id": 1,
+      "title": "Conclusion",
+      "description": "By implementing a structured operational intelligence system, OpsIntel Solutions successfully transformed its operational model from fragmented and manual to intelligent, automated, and data-driven."
+    }
+  ]
+},
+
+ {
+  "id": 5,
+  "title": "System Deployment",
+  "slug": "system-deployment",
+  "image": "/system-deploy.png",
+  "description": "Assesses how seamlessly the system can integrate with existing infrastructure, including ERP systems, databases...",
+
+  "info": {
+    "company": {
+      "title": "Company Name",
+      "name": "OpsIntel Solutions"
+    },
+    "category": {
+      "title": "Category",
+      "name": "Dashboard Design"
+    },
+    "timelines": {
+      "title": "Timelines",
+      "months": "3 Months"
+    },
+    "related_tags": {
+      "title": "Related Tags",
+      "tags": [
+        {
+          "id": 1,
+          "name": "Intelligent"
+        },
+        {
+          "id": 2,
+          "name": "Artificial"
+        },
+        {
+          "id": 3,
+          "name": "System"
+        }
+      ]
+    }
+  },
+
+  "overview": [
+    {
+      "id": 1,
+      "title": "Overview",
+      "description": "OpsIntel Solutions is a large enterprise organization facing challenges in operational visibility, reporting inefficiencies, and delayed decision-making due to fragmented systems and manual workflows.",
+      "image": "/overview.png"
+    }
+  ],
+
+  "challenge": [
+    {
+      "id": 1,
+      "title": "Challenge",
+      "sub_title": "Despite investing in digital tools, OpsIntel Solutions struggled with:",
+      "list": [
+        "Lack of real-time operational visibility",
+        "Heavy reliance on manual reporting processes",
+        "Disconnected systems across departments",
+        "Delays in executive decision-making",
+        "Inefficient data retrieval and workflow bottlenecks"
+      ],
+      "description": "These challenges limited the organization’s ability to scale efficiently and respond to operational demands."
+    }
+  ],
+
+  "solution": [
+    {
+      "id": 1,
+      "title": "Solution",
+      "sub_title": "A structured Operational Intelligence System was deployed to integrate workflows, automate reporting, and enable real-time decision support.",
+      "key_title": "Key Implementations",
+      "list": [
+        "Deployment of AI-powered operational intelligence assistants",
+        "Integration with ERP systems and internal databases",
+        "Automated reporting infrastructure with real-time dashboards",
+        "Workflow automation and execution tracking systems",
+        "Centralized knowledge and document intelligence system"
+      ],
+      "image": "/solution-image.png"
+    }
+  ],
+
+  "system_capability": [
+    {
+      "id": 1,
+      "title": "System Capability",
+      "sub_title": "The system was engineered to handle complex operational environments with:",
+      "list": [
+        "Real-time data processing and intelligence generation",
+        "Seamless integration across multiple platforms",
+        "Scalable infrastructure aligned with organizational growth",
+        "Secure deployment within internal infrastructure"
+      ]
+    }
+  ],
+
+  "integration_readiness": [
+    {
+      "id": 1,
+      "title": "Integration Readiness",
+      "sub_title": "The solution was fully integrated into existing infrastructure:",
+      "list": [
+        "Connected with ERP, reporting tools, and internal systems",
+        "No disruption to ongoing operations during deployment",
+        "Aligned with governance frameworks and security policies",
+        "Configured to match organizational workflows"
+      ]
+    }
+  ],
+
+  "operational_impact": [
+    {
+      "id": 1,
+      "title": "Operational Impact",
+      "sub_title": "Following deployment, OpsIntel Solutions achieved:",
+      "list": [
+        "60–80% faster information retrieval",
+        "Up to 85% reduction in manual reporting workload",
+        "Real-time operational visibility across departments",
+        "Significant improvement in decision-making speed",
+        "Enhanced workflow efficiency and execution tracking"
+      ],
+      "image": "/oparational-impact.png"
+    }
+  ],
+
+  "results": [
+    {
+      "id": 1,
+      "title": "Results",
+      "sub_title": "Improved operational efficiency and system reliability",
+      "list": [
+        "Faster and more informed executive decisions",
+        "Reduced dependency on manual processes",
+        "Scalable infrastructure supporting long-term growth"
+      ]
+    }
+  ],
+
+  "conclusion": [
+    {
+      "id": 1,
+      "title": "Conclusion",
+      "description": "By implementing a structured operational intelligence system, OpsIntel Solutions successfully transformed its operational model from fragmented and manual to intelligent, automated, and data-driven."
+    }
+  ]
+},
+
+  {
+  "id": 6,
+  "title": "How Impact on Your Industry",
+  "slug": "how-impact-on-your-industry",
+  "image": "/industry.png",
+  "description": "Measures the system’s effectiveness in improving execution, reducing manual workload, enhancing visibilit...",
+
+  "info": {
+    "company": {
+      "title": "Company Name",
+      "name": "OpsIntel Solutions"
+    },
+    "category": {
+      "title": "Category",
+      "name": "Dashboard Design"
+    },
+    "timelines": {
+      "title": "Timelines",
+      "months": "3 Months"
+    },
+    "related_tags": {
+      "title": "Related Tags",
+      "tags": [
+        {
+          "id": 1,
+          "name": "Intelligent"
+        },
+        {
+          "id": 2,
+          "name": "Artificial"
+        },
+        {
+          "id": 3,
+          "name": "System"
+        }
+      ]
+    }
+  },
+
+  "overview": [
+    {
+      "id": 1,
+      "title": "Overview",
+      "description": "OpsIntel Solutions is a large enterprise organization facing challenges in operational visibility, reporting inefficiencies, and delayed decision-making due to fragmented systems and manual workflows.",
+      "image": "/overview.png"
+    }
+  ],
+
+  "challenge": [
+    {
+      "id": 1,
+      "title": "Challenge",
+      "sub_title": "Despite investing in digital tools, OpsIntel Solutions struggled with:",
+      "list": [
+        "Lack of real-time operational visibility",
+        "Heavy reliance on manual reporting processes",
+        "Disconnected systems across departments",
+        "Delays in executive decision-making",
+        "Inefficient data retrieval and workflow bottlenecks"
+      ],
+      "description": "These challenges limited the organization’s ability to scale efficiently and respond to operational demands."
+    }
+  ],
+
+  "solution": [
+    {
+      "id": 1,
+      "title": "Solution",
+      "sub_title": "A structured Operational Intelligence System was deployed to integrate workflows, automate reporting, and enable real-time decision support.",
+      "key_title": "Key Implementations",
+      "list": [
+        "Deployment of AI-powered operational intelligence assistants",
+        "Integration with ERP systems and internal databases",
+        "Automated reporting infrastructure with real-time dashboards",
+        "Workflow automation and execution tracking systems",
+        "Centralized knowledge and document intelligence system"
+      ],
+      "image": "/solution-image.png"
+    }
+  ],
+
+  "system_capability": [
+    {
+      "id": 1,
+      "title": "System Capability",
+      "sub_title": "The system was engineered to handle complex operational environments with:",
+      "list": [
+        "Real-time data processing and intelligence generation",
+        "Seamless integration across multiple platforms",
+        "Scalable infrastructure aligned with organizational growth",
+        "Secure deployment within internal infrastructure"
+      ]
+    }
+  ],
+
+  "integration_readiness": [
+    {
+      "id": 1,
+      "title": "Integration Readiness",
+      "sub_title": "The solution was fully integrated into existing infrastructure:",
+      "list": [
+        "Connected with ERP, reporting tools, and internal systems",
+        "No disruption to ongoing operations during deployment",
+        "Aligned with governance frameworks and security policies",
+        "Configured to match organizational workflows"
+      ]
+    }
+  ],
+
+  "operational_impact": [
+    {
+      "id": 1,
+      "title": "Operational Impact",
+      "sub_title": "Following deployment, OpsIntel Solutions achieved:",
+      "list": [
+        "60–80% faster information retrieval",
+        "Up to 85% reduction in manual reporting workload",
+        "Real-time operational visibility across departments",
+        "Significant improvement in decision-making speed",
+        "Enhanced workflow efficiency and execution tracking"
+      ],
+      "image": "/oparational-impact.png"
+    }
+  ],
+
+  "results": [
+    {
+      "id": 1,
+      "title": "Results",
+      "sub_title": "Improved operational efficiency and system reliability",
+      "list": [
+        "Faster and more informed executive decisions",
+        "Reduced dependency on manual processes",
+        "Scalable infrastructure supporting long-term growth"
+      ]
+    }
+  ],
+
+  "conclusion": [
+    {
+      "id": 1,
+      "title": "Conclusion",
+      "description": "By implementing a structured operational intelligence system, OpsIntel Solutions successfully transformed its operational model from fragmented and manual to intelligent, automated, and data-driven."
+    }
+  ]
+}
+
+]
+
 
 }

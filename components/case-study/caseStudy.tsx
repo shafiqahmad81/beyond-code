@@ -2,12 +2,12 @@
 
 import { motion } from "framer-motion";
 import CaseStudyCard from "./caseStudyCard";
-import { CaseStudyData } from "@/data/caseStudy";
 import GradienArrowtButton from "../button/gradientArrowButton";
+import data from "@/data/en.json";
 
 export default function CaseStudySection() {
-  const caseStudyData = CaseStudyData;
-  const caseStudy = caseStudyData.slice(0, 3);
+  const {casestudy} = data;
+  const caseStudy = casestudy.slice(0, 3);
   return (
     <section className="py-7 lg:py-14">
       <div className="container ">

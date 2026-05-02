@@ -1,6 +1,5 @@
 import Image from "next/image";
-import { CaseStudyData } from "@/data/caseStudy";
-import TextEdtor from "@/components/text-editor/text-editor";
+import data from "@/data/en.json";
 
 type CaseStudyProps = {
     params: Promise<{
@@ -9,9 +8,9 @@ type CaseStudyProps = {
 };
 
 export default async function Page({ params }: CaseStudyProps) {
+    const {casestudy} = data;
     const { slug } = await params;
-    const caseStudy = CaseStudyData;
-    const singleCaseStudy = caseStudy.find((item) => item.slug === slug);
+    const singleCaseStudy = casestudy.find((item) => item.slug === slug);
     const info = singleCaseStudy?.info;
     const overview = singleCaseStudy?.overview;
     const challenge = singleCaseStudy?.challenge;
@@ -85,8 +84,12 @@ export default async function Page({ params }: CaseStudyProps) {
                                     <div key={item.id}>
                                         <h2 className="text-2xl sm:text-3xl lg:text-4xl lg:leading-10 mb-2.5 sm:mb-5">{item?.title}</h2>
                                         <p className="text-[#C1C1C1]">{item?.sub_title}</p>
-                                        <ul className="text-[#C1C1C1] list-disc pl-6 mt-1">
-                                            <TextEdtor description={item?.list} />
+                                        <ul className="text-[#C1C1C1] list-disc pl-8 mt-1">
+                                            {item.list.map((point: string, index: number) => (
+                                                <li key={index} className="text-[#C1C1C1]">
+                                                {point}
+                                                </li>
+                                            ))}
                                         </ul>
                                         <p className="text-[#C1C1C1]">{item?.description}</p>
                                     </div>
@@ -101,8 +104,12 @@ export default async function Page({ params }: CaseStudyProps) {
                                         <p className="text-[#C1C1C1]">{item?.sub_title}</p>
 
                                         <p className="text-[#C1C1C1]">{item?.key_title}</p>
-                                        <ul className="text-[#C1C1C1] list-disc pl-6 mt-1">
-                                            <TextEdtor description={item?.list} />
+                                        <ul className="text-[#C1C1C1] list-disc pl-8 mt-1">
+                                            {item.list.map((point: string, index: number) => (
+                                                <li key={index} className="text-[#C1C1C1]">
+                                                {point}
+                                                </li>
+                                            ))}
                                         </ul>
 
                                         <div className="w-full max-w-216.25 mt-6 sm:mt-12">
@@ -122,8 +129,12 @@ export default async function Page({ params }: CaseStudyProps) {
                                     <div key={item.id}>
                                         <h2 className="text-2xl sm:text-3xl lg:text-4xl lg:leading-10 mb-2.5 sm:mb-5">{item?.title}</h2>
                                         <p className="text-[#C1C1C1]">{item?.sub_title}</p>
-                                        <ul className="text-[#C1C1C1] list-disc pl-6 mt-1">
-                                            <TextEdtor description={item?.list} />
+                                        <ul className="text-[#C1C1C1] list-disc pl-8 mt-1">
+                                            {item.list.map((point: string, index: number) => (
+                                                <li key={index} className="text-[#C1C1C1]">
+                                                {point}
+                                                </li>
+                                            ))}
                                         </ul>
                                     </div>
                                 )
@@ -134,8 +145,12 @@ export default async function Page({ params }: CaseStudyProps) {
                                     <div key={item.id}>
                                         <h2 className="text-2xl sm:text-3xl lg:text-4xl lg:leading-10 mb-2.5 sm:mb-5">{item?.title}</h2>
                                         <p className="text-[#C1C1C1]">{item?.sub_title}</p>
-                                        <ul className="text-[#C1C1C1] list-disc pl-6 mt-1">
-                                            <TextEdtor description={item?.list} />
+                                        <ul className="text-[#C1C1C1] list-disc pl-8 mt-1">
+                                            {item.list.map((point: string, index: number) => (
+                                                <li key={index} className="text-[#C1C1C1]">
+                                                {point}
+                                                </li>
+                                            ))}
                                         </ul>
                                     </div>
                                 );
@@ -146,8 +161,12 @@ export default async function Page({ params }: CaseStudyProps) {
                                     <div key={item.id}>
                                         <h2 className="text-2xl sm:text-3xl lg:text-4xl lg:leading-10 mb-2.5 sm:mb-5">{item?.title}</h2>
                                         <p className="text-[#C1C1C1]">{item?.sub_title}</p>
-                                        <ul className="text-[#C1C1C1] list-disc pl-6 mt-1">
-                                            <TextEdtor description={item?.list} />
+                                        <ul className="text-[#C1C1C1] list-disc pl-8 mt-1">
+                                            {item.list.map((point: string, index: number) => (
+                                                <li key={index} className="text-[#C1C1C1]">
+                                                {point}
+                                                </li>
+                                            ))}
                                         </ul>
                                         <div className="w-full max-w-216.25 mt-6 sm:mt-12">
                                             <Image
@@ -166,7 +185,13 @@ export default async function Page({ params }: CaseStudyProps) {
                                     <div key={item.id}>
                                         <h2 className="text-2xl sm:text-3xl lg:text-4xl lg:leading-10 mb-2.5 sm:mb-5">{item?.title}</h2>
                                         <p className="text-[#C1C1C1]">{item?.sub_title}</p>
-                                        <TextEdtor description={item?.list} />
+                                        <ul className="text-[#C1C1C1] list-disc pl-8 mt-1">
+                                            {item.list.map((point: string, index: number) => (
+                                                <li key={index} className="text-[#C1C1C1]">
+                                                {point}
+                                                </li>
+                                            ))}
+                                        </ul>
                                     </div>
                                 );
                             })}

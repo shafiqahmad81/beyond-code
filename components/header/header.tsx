@@ -2,30 +2,20 @@
 
 import Link from "next/link";
 import type { MouseEvent } from "react";
-import { Menu, X, Headphones, Globe, ArrowRight } from "lucide-react";
+import { Menu, X, Globe, ArrowRight } from "lucide-react";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
-
 import GradientButton from "../button/GradientButton";
 import WithoutContentButton from "../button/withoutContentButton";
+import data from "@/data/en.json";
 
 export default function Header() {
+    const navItems = data.header[0].navItems;
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
     const [activeSection, setActiveSection] = useState("");
 
     const pathname = usePathname();
-
-    const navItems = [
-        { label: "About", href: "/#about", target: "#about" },
-        { label: "Why Us", href: "/#why-us", target: "#why-us" },
-        { label: "Systems", href: "/#systems", target: "#systems" },
-        { label: "Services", href: "/#services", target: "#services" },
-        { label: "Technology", href: "/#technology", target: "#technology" },
-        { label: "Process", href: "/#process", target: "#process" },
-        { label: "Case Study", href: "/case-study", target: "#case-study" },
-        { label: "Contact", href: "/contact-us", target: "#contact-us" },
-    ];
 
     useEffect(() => {
     const handleScroll = () => {
@@ -33,7 +23,6 @@ export default function Header() {
 
         setScrolled(scrollY > 50);
 
-        // ❌ top এ থাকলে active reset
         if (scrollY < 100) {
             setActiveSection("");
             return;

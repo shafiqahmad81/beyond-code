@@ -34,7 +34,7 @@ export default function Footer() {
     };
 
     return (
-        <section>
+        <footer>
             <div className="container">
                 <div className="lg:px-27.25 -mb-27.5 relative z-20">
                     <div className="bg-[#020411] border border-[#B074FF] rounded-4xl flex flex-col md:flex-row items-center justify-between gap-5 overflow-hidden pl-5 lg:pl-8 xl:pl-16 pt-5 md:pt-0">
@@ -357,7 +357,7 @@ export default function Footer() {
                 </div>
             </div>
 
-        </section>
+        </footer>
     );
 }
 
