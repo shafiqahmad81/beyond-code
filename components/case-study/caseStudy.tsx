@@ -47,25 +47,26 @@ export default function CaseStudySection() {
           </div>
         </div>
         <div className="grid sm:grid-cols-3 gap-y-10 gap-x-5">
-          {caseStudy?.map((item: any) => {
-            return (
-
-              <motion.div
-                key={item.id}
-                initial={{ opacity: 0, y: 60 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, ease: "easeOut" }}
-                viewport={{ once: true, amount: 0.3 }}
-              >
-                <CaseStudyCard
-                  image={item?.image}
-                  title={item?.title}
-                  description={item?.description}
-                  href={`/case-study/${item?.slug}`}
-                />
-              </motion.div>
-            );
-          })}
+          {caseStudy?.map((item: any, index: number) => (
+            <motion.div
+              key={item.id}
+              initial={{ opacity: 0, y: 60 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.6,
+                delay: index * 0.2,
+                ease: "easeOut",
+              }}
+              viewport={{ once: true, amount: 0.3 }}
+            >
+              <CaseStudyCard
+                image={item?.image}
+                title={item?.title}
+                description={item?.description}
+                href={`/case-study/${item?.slug}`}
+              />
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>

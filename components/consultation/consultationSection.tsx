@@ -2,9 +2,11 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import consultationImage from "../../assets/img/consultation.png"
+import consultationImage from "../../assets/img/consultation.png";
+import data from "@/data/en.json";
 
 export default function ConsultationSection() {
+  const { booking } = data;
   return (
     <section className="py-7 lg:py-14">
       <div className="container ">
@@ -15,7 +17,7 @@ export default function ConsultationSection() {
             transition={{ duration: 0.6, ease: "easeOut" }}
             viewport={{ once: true, amount: 0.3 }}
           >
-            Book a free consultation
+            {booking.title}
           </motion.h2>
           <div className="mt-8 sm:mt-12">
 
@@ -32,11 +34,11 @@ export default function ConsultationSection() {
                 height={490}
               />
               {/* <iframe 
-  src="https://cal.com/md.shafiq-ahmad-4ow4pe/30min" 
-  width="100%" 
-  height="600" 
-  frameBorder="0">
-</iframe> */}
+                src="https://cal.com/md.shafiq-ahmad-4ow4pe/30min" 
+                width="100%" 
+                height="600" 
+                frameBorder="0">
+              </iframe> */}
             </motion.div>
           </div>
         </div>

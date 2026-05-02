@@ -5,7 +5,10 @@ import Image1 from "../../assets/img/problem.svg";
 import Image2 from "../../assets/img/common.svg";
 import Image3 from "../../assets/img/ai.svg";
 import Image4 from "../../assets/img/our-solution.svg";
+import data from "@/data/en.json";
+
 export default function WhyBeyond() {
+    const { whyBeyond } = data;
     return (
         <section id="why-us" className="pb-7 md:pb-14">
             <div className="container">
@@ -17,7 +20,8 @@ export default function WhyBeyond() {
                         transition={{ duration: 0.7 }}
                         viewport={{ once: true, amount: 0.3 }}
                     >
-                        Most Systems Fail Here
+                        {/* Most Systems Fail Here */}
+                        {whyBeyond.title}
                     </motion.h2>
 
                     <motion.div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-8 xl:gap-17 mt-10 lg:mt-21.75">
@@ -40,8 +44,8 @@ export default function WhyBeyond() {
                                         />
                                     </div>
                                 </div>
-                                <h5 className="mt-3 sm:mt-6 mb-2 sm:mb-5">The Problem</h5>
-                                <p>Institutions don’t fail because of technology. They fail because nothing is connected.</p>
+                                <h5 className="mt-3 sm:mt-6 mb-2 sm:mb-5">{whyBeyond.items[0].title}</h5>
+                                <p>{whyBeyond.items[0].description}</p>
                             </div>
                         </motion.div>
 
@@ -63,8 +67,8 @@ export default function WhyBeyond() {
                                         />
                                     </div>
                                 </div>
-                                <h5 className="mt-3 sm:mt-6 mb-2 sm:mb-5">Common Industry Problems</h5>
-                                <p>Dashboards without execution</p>
+                                <h5 className="mt-3 sm:mt-6 mb-2 sm:mb-5">{whyBeyond.items[1].title}</h5>
+                                <p>{whyBeyond.items[1].description}</p>
                             </div>
                         </motion.div>
 
@@ -86,8 +90,8 @@ export default function WhyBeyond() {
                                         />
                                     </div>
                                 </div>
-                                <h5 className="mt-3 sm:mt-6 mb-2 sm:mb-5">AI without integration</h5>
-                                <p>Automation without control</p>
+                                <h5 className="mt-3 sm:mt-6 mb-2 sm:mb-5">{whyBeyond.items[2].title}</h5>
+                                <p>{whyBeyond.items[2].description}</p>
                             </div>
                         </motion.div>
 
@@ -109,8 +113,8 @@ export default function WhyBeyond() {
                                         />
                                     </div>
                                 </div>
-                                <h5 className="mt-3 sm:mt-6 mb-2 sm:mb-5">Our Solution</h5>
-                                <p>We build systems that run operations end-to-end</p>
+                                <h5 className="mt-3 sm:mt-6 mb-2 sm:mb-5">{whyBeyond.items[3].title}</h5>
+                                <p>{whyBeyond.items[3].description}</p>
                             </div>
                         </motion.div>
 

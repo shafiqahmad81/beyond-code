@@ -6,16 +6,14 @@ import FAQSection from "@/components/faq-section/faqSection";
 import Footer from "@/components/footer/footerSection";
 import Header from "@/components/header/header";
 import HeroSection from "@/components/herosection/HeroSection";
-import Implementation from "@/components/implementation/implementation";
+import Implementation from "@/components/gets-builds/getsBuilds";
 import LeadershipSection from "@/components/leadership/leadership";
 import OurCore from "@/components/our-core/OurCore";
 import OurMission from "@/components/our-mission/OurMission";
 import Service from "@/components/services/service";
 import Technology from "@/components/technology/technology";
-import GetSection from "@/components/what-you-get/service";
+import GetSection from "@/components/what-you-get/get";
 import WhyBeyond from "@/components/why-beyond/WhyBeyond";
-
-
 
 
 export default function HomePage() {
@@ -38,7 +36,6 @@ export default function HomePage() {
       <FAQSection />
       <ConsultationSection />
       <Footer />
-      
 
     </main>
   );

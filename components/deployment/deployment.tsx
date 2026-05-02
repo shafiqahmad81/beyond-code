@@ -3,7 +3,9 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import deploymentImage from "../../assets/img/built-environment.png";
+import data from "@/data/en.json";
 export default function DeploymentSection() {
+  const { deployment } = data;
   const item = {
     hidden: { opacity: 0, y: 40 },
     show: (i: number) => ({
@@ -28,53 +30,29 @@ export default function DeploymentSection() {
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
               >
-                Built for Your Environment
+                {deployment.title}
               </motion.h2>
             </div>
 
             <div className="divide-y divide-[#4A4A4A] space-y-3 sm:space-y-5 mt-5 sm:mt-8 md:mt-16">
 
-              <motion.div
-                className="pb-3 sm:pb-5 last:pb-0"
-                custom={0}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: true, amount: 0.3 }}
-                variants={item}
-              >
-                <h5>Private Cloud Deployment</h5>
-                <p className="text-sm sm:text-base md:text-xl font-normal sm:leading-7 text-[#C1C1C1] mt-1 sm:mt-2">
-                  Full control inside your infrastructure
-                </p>
-              </motion.div>
+              {deployment.items.map((itemData, index) => (
+                <motion.div
+                  key={itemData.title}
+                  className="pb-3 sm:pb-5 last:pb-0"
+                  custom={index}
+                  initial="hidden"
+                  whileInView="show"
+                  viewport={{ once: true, amount: 0.3 }}
+                  variants={item}
+                >
+                  <h5>{itemData.title}</h5>
 
-              <motion.div
-                className="pb-3 sm:pb-5 last:pb-0"
-                custom={1}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: true, amount: 0.3 }}
-                variants={item}
-              >
-                <h5>On-Premise Deployment</h5>
-                <p className="text-sm sm:text-base md:text-xl font-normal sm:leading-7 text-[#C1C1C1] mt-1 sm:mt-2">
-                  Deployed within your internal systems
-                </p>
-              </motion.div>
-
-              <motion.div
-                className="pb-3 sm:pb-5 last:pb-0"
-                custom={2}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: true, amount: 0.3 }}
-                variants={item}
-              >
-                <h5>Hybrid Deployment</h5>
-                <p className="text-sm sm:text-base md:text-xl font-normal sm:leading-7 text-[#C1C1C1] mt-1 sm:mt-2">
-                  Connects legacy systems with modern intelligence
-                </p>
-              </motion.div>
+                  <p className="text-sm sm:text-base md:text-xl font-normal sm:leading-7 text-[#C1C1C1] mt-1 sm:mt-2">
+                    {itemData.description}
+                  </p>
+                </motion.div>
+              ))}
 
             </div>
           </div>

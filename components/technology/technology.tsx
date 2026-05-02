@@ -1,30 +1,23 @@
 "use client";
 
 import { motion } from "framer-motion";
-import technologyBg from "../../assets/img/technology-bg.png"
 import TechCard from "./techCard";
+import technologyData from "@/data/en.json";
 export default function Technology() {
-  const techStacks = [
-    {
-      title: "AI & Backend",
-      items: ["Python", "PyTorch", "Django", "Flask"],
-    },
-    {
-      title: "Data Infrastructure",
-      items: ["MongoDB", "Elasticsearch", "Vector databases", "Redis"],
-    },
-    {
-      title: "Cloud & Deployment",
-      items: [
-        "AWS",
-        "Google Cloud",
-        "Docker",
-        "Kubernetes",
-        "AWS Lambda",
-        "AWS S3",
-      ],
-    },
-  ];
+
+  type TechStackItem = {
+  title: string;
+  items: string[];
+};
+
+type TechnologyType = {
+  title: string;
+  description: string;
+  techStacks: TechStackItem[];
+};
+
+  const { technology } = technologyData as { technology: TechnologyType };
+  
   return (
     <section id="technology" className="pt-7 md:pt-14 pb-20 md:pb-29.5 bg-transparent">
       <div className="container">
@@ -44,7 +37,7 @@ export default function Technology() {
             viewport={{ once: true }}
             className="mb-5"
           >
-            Technology Stack
+            {technology.title}
           </motion.h2>
 
           <motion.p
@@ -54,7 +47,7 @@ export default function Technology() {
             viewport={{ once: true }}
             className="text-base sm:text-xl font-normal sm:leading-7"
           >
-            Systems built on modern AI and infrastructure layers
+            {technology.description}
           </motion.p>
         </motion.div>
 
@@ -65,7 +58,7 @@ export default function Technology() {
             <div className="w-full max-w-134.25 h-133 bg-[#05E388] absolute bottom-0 left-0 mix-blend-saturation rounded-full"></div>
           </div>
 
-          {techStacks.map((item, index) => (
+          {technology.techStacks.map((item, index) => (
             <motion.div
               key={item.title}
               initial={{ opacity: 0, y: 80 }}

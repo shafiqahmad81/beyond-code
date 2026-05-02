@@ -4,9 +4,11 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import type { MouseEvent } from "react";
 import Image from "next/image";
-import aiImage from "../../assets/img/footer-bg.png"
+import aiImage from "../../assets/img/footer-bg.png";
+import data from "@/data/en.json";
 
 export default function Footer() {
+    const { footer } = data;
     const smoothScroll = (
         e: MouseEvent<HTMLAnchorElement>,
         id: string
@@ -45,7 +47,7 @@ export default function Footer() {
                                 transition={{ duration: 0.45 }}
                                 viewport={{ once: true, amount: 0.3 }}
                             >
-                                Start With a <span className="bg-[linear-gradient(90deg,#FF09F4_0%,#00D1FF_100%)] bg-clip-text text-transparent">Controlled Rollout.</span>
+                                {footer.hero.titlePart} <span className="bg-[linear-gradient(90deg,#FF09F4_0%,#00D1FF_100%)] bg-clip-text text-transparent">{footer.hero.titleHighlight}</span>
                             </motion.h3>
                             {/* <p className="text-sm sm:text-lg font-normal sm:leading-6 text-[#FFFFFF]">Test the system in your environment before scaling.</p> */}
 
@@ -55,21 +57,21 @@ export default function Footer() {
                                 viewport={{ once: true, amount: 0.3 }}
                                 transition={{ duration: 1, ease: "easeOut" }}
                                 className="text-sm sm:text-lg font-normal sm:leading-6 text-[#FFFFFF]"
-                                >
-                                Test the system in your environment before scaling.
+                            >
+                                {footer.hero.subtitle}
                             </motion.p>
 
                             <motion.div className="bg-[linear-gradient(90deg,#FF09F4_0%,#00D1FF_100%)] p-px pr-0.5 rounded-full w-fit"
-                                    initial={{ opacity: 0, y: 20 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 0.45, delay: 0.1 }}
-                                    viewport={{ once: true, amount: 0.3 }}
-                                >
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.45, delay: 0.1 }}
+                                viewport={{ once: true, amount: 0.3 }}
+                            >
                                 <button
                                     className="bg-black hover:bg-white transition-all duration-500 rounded-full px-4 sm:px-6 py-2 lg:py-3 text-sm sm:text-lg font-semibold sm:leading-5 text-white hover:text-black flex items-center gap-5.5 cursor-pointer group will-change-transform jami-link jami-link--arrowed"
-                                    
+
                                 >
-                                    <span>Book for Consultation</span>
+                                    <span>{footer.hero.buttonText}</span>
 
 
                                     <svg
@@ -144,7 +146,7 @@ export default function Footer() {
                                 transition={{ duration: 0.5, ease: "easeOut" }}
                                 viewport={{ once: true, amount: 0.3 }}
                             >
-                                AI operational intelligence infrastructure for institutional execution and reporting automation.
+                                {footer.companyDescription}
                             </motion.p>
                         </div>
                         <div className="flex w-full max-w-140.5 justify-between gap-5">
@@ -158,7 +160,7 @@ export default function Footer() {
                                     transition={{ duration: 0.5, ease: "easeOut" }}
                                     viewport={{ once: true, amount: 0.3 }}
                                 >
-                                    Company
+                                    {footer.company.title}
                                 </motion.h6>
 
                                 <motion.ul
@@ -175,12 +177,7 @@ export default function Footer() {
                                         },
                                     }}
                                 >
-                                    {[
-                                        { label: "About", href: "/#about", target: "#about" },
-                                        { label: "Why Us", href: "/#why-us", target: "#why-us" },
-                                        { label: "Systems", href: "/#systems", target: "#systems" },
-                                        { label: "Services", href: "/#services", target: "#services" },
-                                    ].map((item, index) => (
+                                    {footer.company.links.map((item, index) => (
                                         <motion.li
                                             key={index}
                                             variants={{
@@ -191,13 +188,14 @@ export default function Footer() {
                                         >
                                             <Link
                                                 href={item.href}
-                                                onClick={(e) => smoothScroll(e, item.target)}
+                                                onClick={(e) => item.target && smoothScroll(e, item.target)}
                                                 className="text-sm transition-all hover:text-white/50 sm:text-[15px]"
                                             >
                                                 {item.label}
                                             </Link>
                                         </motion.li>
                                     ))}
+
                                 </motion.ul>
                             </div>
 
@@ -211,7 +209,7 @@ export default function Footer() {
                                     transition={{ duration: 0.5, ease: "easeOut" }}
                                     viewport={{ once: true, amount: 0.3 }}
                                 >
-                                    Use Cases
+                                    {footer.useCases.title}
                                 </motion.h6>
 
 
@@ -229,11 +227,7 @@ export default function Footer() {
                                         },
                                     }}
                                 >
-                                    {[
-                                        { label: "Technology", href: "/#technology", target: "#technology" },
-                                        { label: "Process", href: "/#process", target: "#process" },
-                                        { label: "Case Study", href: "/case-study", target: null },
-                                    ].map((item, index) => (
+                                    {footer.useCases.links.map((item, index) => (
                                         <motion.li
                                             key={index}
                                             variants={{
@@ -281,10 +275,7 @@ export default function Footer() {
                                         },
                                     }}
                                 >
-                                    {[
-                                        { label: "Leadership", href: "/#leadership", target: "#leadership" },
-                                        { label: "FAQs", href: "/#faq", target: "#faq" },
-                                    ].map((item, index) => (
+                                    {footer.resources.links.map((item, index) => (
                                         <motion.li
                                             key={index}
                                             variants={{
@@ -295,7 +286,7 @@ export default function Footer() {
                                         >
                                             <Link
                                                 href={item.href}
-                                                onClick={(e) => smoothScroll(e, item.target)}
+                                                onClick={(e) => item.target && smoothScroll(e, item.target)}
                                                 className="text-sm transition-all hover:text-white/50 sm:text-[15px]"
                                             >
                                                 {item.label}
@@ -325,26 +316,31 @@ export default function Footer() {
                                     },
                                 }}
                             >
-                                {[
-                                    { label: "Privacy Policy", href: "/privacy-policy" },
-                                    { label: "Terms of Use", href: "/terms-of-use" },
-                                ].map((item, index) => (
-                                    <motion.li
-                                        key={index}
-                                        variants={{
-                                            hidden: { opacity: 0, y: 20 },
-                                            show: { opacity: 1, y: 0 },
-                                        }}
-                                        transition={{ duration: 0.5, ease: "easeOut" }}
+                                <motion.div
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.5 }}
+                                >
+                                    <Link
+                                        href="/privacy-policy"
+                                        className="text-sm leading-3 transition-all hover:text-white/50"
                                     >
-                                        <Link
-                                            href={item.href}
-                                            className="text-sm leading-3 transition-all hover:text-white/50"
-                                        >
-                                            {item.label}
-                                        </Link>
-                                    </motion.li>
-                                ))}
+                                        {footer.bottom.privacy}
+                                    </Link>
+                                </motion.div>
+
+                                <motion.div
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.5, delay: 0.1 }}
+                                >
+                                    <Link
+                                        href="/terms-of-use"
+                                        className="text-sm leading-3 transition-all hover:text-white/50"
+                                    >
+                                        {footer.bottom.terms}
+                                    </Link>
+                                </motion.div>
                             </motion.ul>
 
                             <motion.p
@@ -354,7 +350,7 @@ export default function Footer() {
                                 transition={{ duration: 0.5, ease: "easeOut" }}
                                 viewport={{ once: true, amount: 0.3 }}
                             >
-                                © 2026 Beyond Code. All rights reserved.
+                                {footer.bottom.copyright}
                             </motion.p>
                         </div>
                     </div>

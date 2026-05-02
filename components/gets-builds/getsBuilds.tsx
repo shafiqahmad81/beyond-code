@@ -2,34 +2,12 @@
 
 import { motion } from "framer-motion";
 import ProcessCard from "./processCard";
-import GradienArrowtButton from "../button/gradientArrowButton";
 import GradientBgWhite from "../button/GradientBgWhite";
+import getData from "@/data/en.json";
 
-export default function Implementation() {
-  const processes = [
-    {
-      number: 1,
-      title: "Diagnose",
-      description:
-        "Identify operational gaps and inefficiencies",
-    },
-    {
-      number: 2,
-      title: "Structure",
-      description: "Design system logic and governance",
-    },
-    {
-      number: 3,
-      title: "Engineer",
-      description: "Build integrations and an intelligence layer",
-    },
-    {
-      number: 4,
-      title: "Deploy",
-      description:
-        "Launch inside your environment",
-    },
-  ];
+export default function GetsBuilds() {
+  const {getsbuilds} = getData;
+  
   return (
     <section id="process" className="pt-12 md:pt-25">
       <div className="container">
@@ -47,9 +25,9 @@ export default function Implementation() {
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
           >
-            <h2>How It Gets Built</h2>
+            <h2>{getsbuilds.title}</h2>
             <p className="text-base sm:text-xl sm:leading-7 font-normal text-[#C1C1C1] mt-3">
-              Beyond Code follows a 4-stage deployment methodology.
+              {getsbuilds.description}
             </p>
           </motion.div>
 
@@ -61,12 +39,12 @@ export default function Implementation() {
             viewport={{ once: true }}
           >
             <GradientBgWhite
-              text="Learn More"
+              text={getsbuilds.cta}
             />
           </motion.div>
         </motion.div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4.5">
-          {processes.map((item, index) => (
+          {getsbuilds.processes.map((item, index) => (
             <motion.div
               key={item.number}
               initial={{ opacity: 0, y: 80 }}
@@ -90,5 +68,4 @@ export default function Implementation() {
     </section>
   );
 }
-
 

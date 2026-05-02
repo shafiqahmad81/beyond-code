@@ -1,49 +1,19 @@
 "use client";
 
-import { useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Globe, Headphones, Menu, X } from "lucide-react";
 import heroBgTop from "../../assets/img/banner-bg-top.svg";
 import heroBg from "../../assets/img/banner-bg.jpg";
-import Link from "next/link";
-import FeatureCard from "../card/featureCard";
 import Button from "../button/button";
-import GradientButton from "../button/GradientButton";
 import GradientBgWhite from "../button/GradientBgWhite";
-import Image from "next/image";
 import fasterIcon from "../../assets/img/faster.svg";
 import lessIcon from "../../assets/img/less.svg";
 import realIcon from "../../assets/img/real-time.svg";
 import StatItem from "../card/featureCard";
+import heroData from "@/data/en.json";
 export default function HeroSection() {
-        const stats = [
-            {
-            icon: fasterIcon,
-            value: "70%",
-            label: "Faster Preparation",
-            },
-            {
-            icon: lessIcon,
-            value: "85%",
-            label: "Less Manual Reporting",
-            },
-            {
-            icon: realIcon,
-            value: "Real-Time",
-            label: "Operational Visibility",
-            },
-        ];
-    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-    const navItems = [
-        { label: 'About', href: '/about' },
-        { label: 'Why Us', href: '/why-us' },
-        { label: 'Systems', href: '/systems' },
-        { label: 'Services', href: '/services' },
-        { label: 'Technology', href: '/technology' },
-        { label: 'Process', href: '/process' },
-        { label: 'Case Study', href: '/case-study' },
-        { label: 'Contact', href: '/contact' },
-    ];
+
+    const { hero } = heroData;
+        
 
     return (
         <section className="mt-26">
@@ -60,7 +30,6 @@ export default function HeroSection() {
 
             <div className="relative z-40">
                 
-                {/* Hero Content */}
                 <div className="container overflow-hidden ">
                     <div className="space-y-7.5 max-w-166.5 pt-8 md:pt-16 xl:pt-27.25 relative">
 
@@ -69,7 +38,10 @@ export default function HeroSection() {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.7 }}
                         >
-                            Operational <span className="text-[#FF09F4]"> Intelligence </span>for Institutional Systems
+                            {/* Operational <span className="text-[#FF09F4]"> Intelligence </span>for Institutional Systems */}
+                            {hero.title.text.split(hero.title.highlight)[0]}
+                                <span className="text-[#FF09F4]">{hero.title.highlight}</span>
+                            {hero.title.text.split(hero.title.highlight)[1]}
                         </motion.h1>
 
                         <motion.div
@@ -89,7 +61,8 @@ export default function HeroSection() {
                             transition={{ duration: 1.1, ease: "easeOut" }}
                             className="text-[#B2B2B2]"
                             >
-                            Run your operations. Not just your reports.
+                            {/* Run your operations. Not just your reports. */}
+                            {hero.subtitle}
                         </motion.h5>
 
                         <motion.p
@@ -98,7 +71,8 @@ export default function HeroSection() {
                             transition={{ delay: 0.2, duration: 0.7 }}
                             className="text-lg sm:text-xl leading-7.5 font-normal text-[#B2B2B2] mt-7 max-w-224.5"
                         >
-                            Systems that connect execution, reporting, and decision-making in one controlled layer.
+                            {/* Systems that connect execution, reporting, and decision-making in one controlled layer. */}
+                            {hero.description}
                         </motion.p>
                         <motion.div
                             initial={{ opacity: 0, y: 50 }}
@@ -108,12 +82,12 @@ export default function HeroSection() {
                         >
                             <div>
                                 <GradientBgWhite 
-                                    text="Request a Consultation"
+                                    text={hero.buttons.primary}
                                 />
                             </div>
 
                             <Button
-                                text="Explore Systems"
+                                text={hero.buttons.secondary}
                                 href="#"
                             />
                         </motion.div>
@@ -122,13 +96,29 @@ export default function HeroSection() {
                 <div className="container mt-16 sm:mt-20 md:mt-24 lg:mt-30">
                     <div className="w-full max-w-186.25 flex items-center justify-between flex-wrap gap-4">
                         
-                         {stats.map((item, index) => (
-                            <StatItem
-                            key={index}
-                            icon={item.icon}
-                            value={item.value}
-                            label={item.label}
-                            />
+                        {hero.stats.map((item, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, y: 40 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{
+                                    duration: 0.5,
+                                    delay: index * 0.2
+                                }}
+                            >
+                                <StatItem
+                                icon={
+                                    item.icon === "faster"
+                                    ? fasterIcon
+                                    : item.icon === "less"
+                                    ? lessIcon
+                                    : realIcon
+                                }
+                                value={item.value}
+                                label={item.label}
+                                />
+                            </motion.div>
                         ))}
                     </div>
                 </div>

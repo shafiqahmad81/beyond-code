@@ -115,6 +115,14 @@ body {
   top: -1px;
   transition: transform 0.3s ease;
 }
+.arrow-icon-extra {
+  background-color: #1C1C1C;
+  color: white;
+  border-radius: 50%;
+  position: relative;
+  top: -1px;
+  transition: transform 0.3s ease;
+}
 
 .arrow-icon--circle-extra {
   fill: none;
@@ -136,6 +144,10 @@ body {
 }
 
 .jami-link--arrowed:hover .arrow-icon {
+  transform: translate3d(5px, 0, 0);
+}
+
+.jami-link--arrowed:hover .arrow-icon-extra {
   transform: translate3d(5px, 0, 0);
 }
 

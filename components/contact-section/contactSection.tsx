@@ -12,8 +12,11 @@ import facebookIcon from "../../assets/img/facebook.png";
 import tiktokIcon from "../../assets/img/tiktok.png";
 import Image from "next/image";
 import Link from "next/link";
+import data from "@/data/en.json";
+
 
 export default function ContactSection() {
+const { contact } = data;
   return (
     <section className="pb-7 md:pb-14 pt-30 sm:pt-40 lg:pt-50">
       <div className="container">
@@ -31,8 +34,8 @@ export default function ContactSection() {
                     transition={{ duration: 0.6, ease: "easeOut" }}
                     viewport={{ once: true, amount: 0.3 }}
                   >
-                    <span className="text-[#636363]">Book a consultation </span>
-                    unlock operational intelligence.
+                    <span className="text-[#636363]">{contact.left.highlight} </span>
+                    {contact.left.title}
                   </motion.p>
 
                   <motion.div
@@ -43,7 +46,7 @@ export default function ContactSection() {
                     viewport={{ once: true, amount: 0.3 }}
                   >
                     <GradientButton
-                      text="Book for consulation"
+                      text={contact.left.buttonText}
                     />
                   </motion.div>
                 </div>
@@ -57,7 +60,7 @@ export default function ContactSection() {
                       transition={{ duration: 0.5, ease: "easeOut" }}
                       viewport={{ once: true, amount: 0.3 }}
                     >
-                      Contact Details
+                      {contact.contactDetails.title}
                     </motion.h5>
                     
                     <motion.div
@@ -86,7 +89,7 @@ export default function ContactSection() {
                         <div className="w-full max-w-4.75">
                           <Image src={phoneIcon} alt="phoneIcon" width={19} height={19} />
                         </div>
-                        <Link href="tel:+966000115666">+966 000 115666</Link>
+                        <Link href="tel:+966000115666">{contact.contactDetails.phone}</Link>
                       </motion.div>
 
                       {/* Email */}
@@ -102,7 +105,7 @@ export default function ContactSection() {
                           <Image src={maileIcon} alt="maileIcon" width={19} height={19} />
                         </div>
                         <Link href="mailto:info@beyondcode.ae">
-                          info@beyondcode.ae
+                          {contact.contactDetails.email}
                         </Link>
                       </motion.div>
 
@@ -118,7 +121,7 @@ export default function ContactSection() {
                         <div className="w-full max-w-4.75">
                           <Image src={locationIcon} alt="locationIcon" width={19} height={19} />
                         </div>
-                        Abu Dhabi, UAE
+                        {contact.contactDetails.location}
                       </motion.div>
                     </motion.div>
                   </div>
@@ -131,7 +134,7 @@ export default function ContactSection() {
                       transition={{ duration: 0.5, ease: "easeOut" }}
                       viewport={{ once: true, amount: 0.3 }}
                     >
-                      Social links
+                      {contact.socialTitle}
                     </motion.h3>
                     
                     <motion.div
@@ -177,7 +180,7 @@ export default function ContactSection() {
 
               {/* Right panel */}
               <div className="py-4 lg:py-7 pr-4 lg:pr-7 w-full md:max-w-182.75">
-                <div className="rounded-[18px] bg-[#1A1A1A]/50 px-5 lg:px-14.5 pt-5 lg:pt-14 pb-5 lg:pb-11 text-white">
+                <div className="rounded-[18px] bg-[#1A1A1A]/60 px-5 lg:px-14.5 pt-5 lg:pt-14 pb-5 lg:pb-11 text-white">
                  
                   <motion.span
                     className="inline-block rounded-full border border-white px-4 py-2 sm:py-3 text-sm sm:text-lg font-normal sm:leading-6 text-white"
@@ -186,7 +189,7 @@ export default function ContactSection() {
                     transition={{ duration: 0.5, ease: "easeOut" }}
                     viewport={{ once: true, amount: 0.3 }}
                   >
-                    Contact Us
+                    {contact.form.titleBadge}
                   </motion.span>
                   <motion.h2
                     className="mt-7"
@@ -195,7 +198,7 @@ export default function ContactSection() {
                     transition={{ duration: 0.6, ease: "easeOut" }}
                     viewport={{ once: true, amount: 0.3 }}
                   >
-                    Let’s discuss how we can transform your operations with intelligent systems.
+                    {contact.form.title}
                   </motion.h2>
 
                   <motion.form
@@ -212,18 +215,7 @@ export default function ContactSection() {
                       },
                     }}
                   >
-                    {[
-                      {
-                        label: "Full Name",
-                        type: "text",
-                        placeholder: "Full Name",
-                      },
-                      {
-                        label: "Email",
-                        type: "email",
-                        placeholder: "you@example.com",
-                      },
-                    ].map((field, index) => (
+                    {contact.form.fields.map((field, index) => (
                       <motion.div
                         key={index}
                         variants={{
@@ -253,12 +245,12 @@ export default function ContactSection() {
                       transition={{ duration: 0.5, ease: "easeOut" }}
                     >
                       <label className="mb-4 block text-sm sm:text-base leading-5 text-[#515151] font-semibold">
-                        Message
+                        {contact.form.messageLabel}
                       </label>
 
                       <textarea
                         rows={1}
-                        placeholder="Tell more about your idea"
+                        placeholder={contact.form.messagePlaceholder}
                         className="w-full text-sm sm:text-base text-[#BFBFBF] sm:leading-6 border-b border-white/20 bg-transparent pb-3 outline-none placeholder:text-[#BFBFBF]"
                       />
                     </motion.div>
@@ -272,7 +264,7 @@ export default function ContactSection() {
                       transition={{ duration: 0.5, ease: "easeOut" }}
                     >
                       <Button
-                        text="Send Message"
+                        text={contact.form.buttonText}
                         icon={<ArrowRight className="h-4 w-4" />}
                       />
                     </motion.div>

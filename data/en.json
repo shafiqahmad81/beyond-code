@@ -1,0 +1,429 @@
+{
+  "hero": {
+    "title": {
+      "text": "Operational Intelligence for Institutional Systems",
+      "highlight": "Intelligence"
+    },
+    "subtitle": "Run your operations. Not just your reports.",
+    "description": "Systems that connect execution, reporting, and decision-making in one controlled layer",
+    "buttons": {
+      "primary": "Request a Consultation",
+      "secondary": "Explore Systems"
+    },
+    "stats": [
+      {
+        "icon": "faster",
+        "value": "70%",
+        "label": "Faster Preparation"
+        },
+        {
+        "icon": "less",
+        "value": "85%",
+        "label": "Less Manual Reporting"
+        },
+        {
+        "icon": "real",
+        "value": "Real-Time",
+        "label": "Operational Visibility"
+        }
+    ]
+  },
+  "mission": {
+    "sections": [
+      {
+        "title": "Built for Institutional Environments",
+        "description": "Beyond Code builds operational intelligence systems that run inside real institutions."
+      },
+      {
+        "title": "Our Mission",
+        "description": "Close the gap between AI capability and real execution."
+      },
+      {
+        "title": "Our Approach",
+        "description": "Systems are designed to align with:",
+        "list": [
+          "Institutional governance structures",
+          "Existing operational workflows",
+          "Reporting frameworks",
+          "Infrastructure environments"
+        ]
+      }
+    ]
+  },
+
+  "whyBeyond": {
+    "title": "Most Systems Fail Here",
+    "items": [
+      {
+        "title": "The Problem",
+        "description": "Institutions don’t fail because of technology. They fail because nothing is connected."
+      },
+      {
+        "title": "Common Industry Problems",
+        "description": "Dashboards without execution"
+      },
+      {
+        "title": "AI without integration",
+        "description": "Automation without control"
+      },
+      {
+        "title": "Our Solution",
+        "description": "We build systems that run operations end-to-end"
+      }
+    ]
+  },
+
+
+  "core": {
+    "title": "Our Core Systems",
+    "button": "Book for consultation",
+
+    "systems": [
+      {
+        "badge": "System 1",
+        "title": "Agentic Institutional Intelligence",
+        "description": "Real-time decision support across your operations",
+
+        "capabilitiesTitle": "Capabilities",
+        "capabilities": [
+          "Operational intelligence assistant",
+          "Reporting intelligence interface",
+          "Workflow intelligence models",
+          "Decision support models",
+          "Document management integration",
+          "ERP and operational database connectivity"
+        ],
+
+        "impactTitle": "Impact",
+        "impact": [
+          "50–70% faster executive decision preparation",
+          "60–80% faster information retrieval",
+          "70–90% reduction in manual data retrieval",
+          "Up to 60% improved institutional responsiveness"
+        ]
+      },
+
+      {
+        "badge": "System 2",
+        "title": "Institutional Policy-Linked Reporting",
+        "description": "Reporting connected directly to governance",
+
+        "capabilitiesTitle": "Key Features",
+        "capabilities": [
+          "Automated report generation",
+          "Policy and clause linking",
+          "Intelligent compliance tracking",
+          "Structured document workflows"
+        ],
+
+        "impactTitle": "Impact",
+        "impact": [
+          "80% faster report preparation",
+          "85% reduction in manual reporting work",
+          "Up to <span class='text-white'>15× faster report generation</span>"
+        ]
+      }
+    ],
+
+    "whatChanges": {
+      "title": "What Changes",
+      "items": [
+        "Make decisions faster",
+        "See operations clearly",
+        "Remove manual dependency",
+        "Run systems, not processes"
+      ]
+    }
+  },
+
+    "services": {
+    "title": "What We Build",
+    "button": "Contact us",
+    "cards": [
+      {
+        "title": "Intelligence & Predictive Systems",
+        "description": "Make decisions faster with built-in intelligence"
+      },
+      {
+        "title": "Operational Intelligence Systems",
+        "description": "See what’s happening across your operations in real time"
+      },
+      {
+        "title": "Automation Systems",
+        "description": "Remove manual work from core processes"
+      },
+      {
+        "title": "Custom Intelligence Development",
+        "description": "Built around how your organization actually operates"
+      }
+    ]
+  },
+
+  "technology": {
+    "title": "Technology Stack",
+    "description": "Systems built on modern AI and infrastructure layers",
+    "techStacks": [
+      {
+        "title": "AI & Backend",
+        "items": ["Python", "PyTorch", "Django", "Flask"]
+      },
+      {
+        "title": "Data Infrastructure",
+        "items": ["MongoDB", "Elasticsearch", "Vector databases", "Redis"]
+      },
+      {
+        "title": "Cloud & Deployment",
+        "items": [
+          "AWS",
+          "Google Cloud",
+          "Docker",
+          "Kubernetes",
+          "AWS Lambda",
+          "AWS S3"
+        ]
+      }
+    ]
+  },
+
+    "getSection": {
+    "title": "What You Get",
+    "items": [
+      {
+        "title": "AI Assistants",
+        "description": "Internal assistants trained on your systems, embedded into workflows"
+      },
+      {
+        "title": "Operational Intelligence",
+        "description": "Track execution in real time"
+      },
+      {
+        "title": "Enterprise Reporting Infrastructure",
+        "description": "Reports that generate automatically"
+      },
+      {
+        "title": "Workflow Automation",
+        "description": "Processes that run without manual coordination"
+      },
+      {
+        "title": "Full System Deployment",
+        "description": "Built directly into your environment"
+      }
+    ]
+  },
+
+   "getsbuilds": {
+    "title": "How It Gets Built",
+    "description": "Beyond Code follows a 4-stage deployment methodology.",
+    "cta": "Learn More",
+    "processes": [
+      {
+        "number": 1,
+        "title": "Diagnose",
+        "description": "Identify operational gaps and inefficiencies"
+      },
+      {
+        "number": 2,
+        "title": "Structure",
+        "description": "Design system logic and governance"
+      },
+      {
+        "number": 3,
+        "title": "Engineer",
+        "description": "Build integrations and an intelligence layer"
+      },
+      {
+        "number": 4,
+        "title": "Deploy",
+        "description": "Launch inside your environment"
+      }
+    ]
+  },
+
+    "deployment": {
+    "title": "Built for Your Environment",
+    "items": [
+      {
+        "title": "Private Cloud Deployment",
+        "description": "Full control inside your infrastructure"
+      },
+      {
+        "title": "On-Premise Deployment",
+        "description": "Deployed within your internal systems"
+      },
+      {
+        "title": "Hybrid Deployment",
+        "description": "Connects legacy systems with modern intelligence"
+      }
+    ]
+  },
+
+  "controlStays": {
+    "title": "Control Stays With You",
+    "subtitle": "Your control. Fully maintained.",
+    "items": [
+      {
+        "type": "youOwn",
+        "title": "You Own",
+        "points": ["Your data", "Your infrastructure", "Your deployment"]
+      },
+      {
+        "type": "weProvide",
+        "title": "We Provide",
+        "points": [
+          "System architecture",
+          "Intelligence layer",
+          "Deployment support"
+        ]
+      }
+    ]
+  },
+
+  "leadership": {
+    "title": "Leadership",
+    "items": [
+      "Built by operators who understand how institutions actually run.",
+      "We design systems that transition seamlessly from structure to execution within real-world environments."
+    ],
+    "cta": {
+      "text": "Start the Conversation"
+    },
+    "members": [
+      {
+        "name": "Reem Aljneibi",
+        "role": "Founder & CEO",
+        "description": "Operational Intelligence Systems",
+        "icon": "operational-intelligence"
+      },
+      {
+        "name": "Mohammed Alyafaei",
+        "role": "Chief Technology Officer",
+        "description": "Systems Architecture and AI Infrastructure",
+        "icon": "systems-architecture"
+      },
+      {
+        "name": "Yasir Arafat",
+        "role": "Chief Operation Officer",
+        "description": "Operational Systems & Execution",
+        "icon": "oparational-system"
+      }
+    ]
+  },
+
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "items": [
+      {
+        "question": "What does Beyond Code do?",
+        "answer": "Beyond Code designs and deploys operational intelligence systems that integrate AI, automation, and data infrastructure to improve execution, reporting, and decision-making within institutional environments."
+      },
+      {
+        "question": "How are your systems different from traditional AI tools?",
+        "answer": "Our systems are built around your workflows and reporting structure, not just prompts. They automate execution, provide visibility, and support measurable operational outcomes."
+      },
+      {
+        "question": "Can your systems integrate with our existing platforms?",
+        "answer": "Yes, we can integrate with CRMs, ERPs, internal dashboards, APIs, and cloud platforms depending on your infrastructure."
+      },
+      {
+        "question": "How long does implementation take?",
+        "answer": "Most pilot deployments take 2–6 weeks depending on complexity, data readiness, and stakeholder alignment."
+      },
+      {
+        "question": "Do you offer a pilot or trial before full deployment?",
+        "answer": "Yes — we typically offer a pilot engagement before full deployment. This allows us to validate workflows and align the system with your team’s real-world processes before scaling to a full implementation."
+      },
+      {
+        "question": "How secure are your systems?",
+        "answer": "Security is built into every layer of our systems. We follow best practices for data encryption, access control, and secure integrations."
+      },
+      {
+        "question": "Will we retain ownership of our data and systems?",
+        "answer": "Yes — you retain full ownership of your data, systems, and all operational intelligence assets at every stage of deployment."
+      },
+      {
+        "question": "What kind of results can we expect?",
+        "answer": "You can expect streamlined workflows, stronger operational visibility, faster decision-making, and measurable improvements in efficiency, accuracy, and execution outcomes."
+      }
+    ]
+  },
+
+  "booking":{
+     "title": "Book a free consultation"
+  },
+
+
+  "footer":{
+      "hero": {
+      "titlePart": "Start With a",
+      "titleHighlight": "Controlled Rollout.",
+      "subtitle": "Test the system in your environment before scaling.",
+      "buttonText": "Book for Consultation"
+    },
+    "companyDescription": "AI operational intelligence infrastructure for institutional execution and reporting automation.",
+    "company": {
+      "title": "Company",
+      "links": [
+        { "label": "About", "href": "/#about", "target": "#about" },
+        { "label": "Why Us", "href": "/#why-us", "target": "#why-us" },
+        { "label": "Systems", "href": "/#systems", "target": "#systems" },
+        { "label": "Services", "href": "/#services", "target": "#services" }
+      ]
+    },
+    "useCases": {
+      "title": "Use Cases",
+      "links": [
+        { "label": "Technology", "href": "/#technology", "target": "#technology" },
+        { "label": "Process", "href": "/#process", "target": "#process" },
+        { "label": "Case Study", "href": "/case-study", "target": null }
+      ]
+    },
+    "resources": {
+      "title": "Resources",
+      "links": [
+        { "label": "Leadership", "href": "/#leadership", "target": "#leadership" },
+        { "label": "FAQs", "href": "/#faq", "target": "#faq" }
+      ]
+    },
+    "bottom": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Use",
+      "copyright": "© 2026 Beyond Code. All rights reserved."
+    }
+  },
+
+  "contact": {
+      "left": {
+      "title": "unlock operational intelligence.",
+      "highlight": "Book a consultation",
+      "buttonText": "Book for consultation"
+    },
+    "contactDetails": {
+      "title": "Contact Details",
+      "phone": "+966 000 115666",
+      "email": "info@beyondcode.ae",
+      "location": "Abu Dhabi, UAE"
+    },
+    "socialTitle": "Social links",
+    "form": {
+      "titleBadge": "Contact Us",
+      "title": "Let’s discuss how we can transform your operations with intelligent systems.",
+      "fields": [
+        {
+          "label": "Full Name",
+          "placeholder": "Full Name",
+          "type": "text"
+        },
+        {
+          "label": "Email",
+          "placeholder": "you@example.com",
+          "type": "email"
+        }
+      ],
+      "messageLabel": "Message",
+      "messagePlaceholder": "Tell more about your idea",
+      "buttonText": "Send Message"
+    }
+  }
+  
+
+}

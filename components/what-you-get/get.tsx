@@ -6,9 +6,11 @@ import serviceImage2 from "../../assets/img/get-operational.svg";
 import serviceImage3 from "../../assets/img/get-enterprise.svg";
 import serviceImage4 from "../../assets/img/get-workflow.svg";
 import serviceImage5 from "../../assets/img/upload.svg";
+import getData from "@/data/en.json";
 import Image from "next/image";
 
 export default function GetSection() {
+  const { getSection } = getData;
 
   return (
     <section id="services" className="py-7 md:py-14">
@@ -29,7 +31,7 @@ export default function GetSection() {
             viewport={{ once: true }}
             className="text-center"
           >
-            What You Get
+            {getSection.title}
           </motion.h2>
         </motion.div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-2 h-full">
@@ -38,6 +40,7 @@ export default function GetSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{
               duration: 0.6,
+              delay: 0.2,
               ease: "easeOut",
             }}
             viewport={{ once: true, amount: 0.2 }}
@@ -53,9 +56,9 @@ export default function GetSection() {
                 />
               </div>
               <div className="space-y-3 sm:space-y-5 relative z-10">
-                <h5 className="text-lg md:text-xl xl:text-[1.5rem] xl:leading-[2.1rem]">AI Assistants</h5>
+                <h5 className="text-lg md:text-xl xl:text-[1.5rem] xl:leading-[2.1rem]">{getSection.items[0].title}</h5>
                 <div className="w-15.5 h-1 rounded-full bg-[#9747FF]"></div>
-                <p>Internal assistants trained on your systems, embedded into workflows</p>
+                <p>{getSection.items[0].description}</p>
               </div>
             </div>
           </motion.div>
@@ -64,6 +67,7 @@ export default function GetSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{
               duration: 0.6,
+              delay: 0.4,
               ease: "easeOut",
             }}
             viewport={{ once: true, amount: 0.2 }}
@@ -79,9 +83,9 @@ export default function GetSection() {
                 />
               </div>
               <div className="space-y-3 sm:space-y-5">
-                <h5 className="text-lg md:text-xl xl:text-[1.5rem] xl:leading-[2.1rem]">Operational Intelligence</h5>
+                <h5 className="text-lg md:text-xl xl:text-[1.5rem] xl:leading-[2.1rem]">{getSection.items[1].title}</h5>
                 <div className="w-15.5 h-1 rounded-full bg-[#2D7FFF]"></div>
-                <p>Track execution in real time</p>
+                <p>{getSection.items[1].description}</p>
               </div>
             </div>
           </motion.div>
@@ -90,6 +94,7 @@ export default function GetSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{
               duration: 0.6,
+              delay: 0.6,
               ease: "easeOut",
             }}
             viewport={{ once: true, amount: 0.2 }}
@@ -105,9 +110,9 @@ export default function GetSection() {
                 />
               </div>
               <div className="space-y-3 sm:space-y-5">
-                <h5 className="text-lg md:text-xl xl:text-[1.5rem] xl:leading-[2.1rem]">Enterprise Reporting Infrastructure</h5>
+                <h5 className="text-lg md:text-xl xl:text-[1.5rem] xl:leading-[2.1rem]">{getSection.items[2].title}</h5>
                 <div className="w-15.5 h-1 rounded-full bg-[#00D1FF]"></div>
-                <p>Reports that generate automatically</p>
+                <p>{getSection.items[2].description}</p>
               </div>
             </div>
           </motion.div>
@@ -116,6 +121,7 @@ export default function GetSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{
               duration: 0.6,
+              delay: 0.8,
               ease: "easeOut",
             }}
             viewport={{ once: true, amount: 0.2 }}
@@ -131,9 +137,9 @@ export default function GetSection() {
                 />
               </div>
               <div className="space-y-3 sm:space-y-5">
-                <h5 className="text-lg md:text-xl xl:text-[1.5rem] xl:leading-[2.1rem]">Workflow Automation</h5>
+                <h5 className="text-lg md:text-xl xl:text-[1.5rem] xl:leading-[2.1rem]">{getSection.items[3].title}</h5>
                 <div className="w-15.5 h-1 rounded-full bg-[#2DE55E]"></div>
-                <p>Processes that run without manual coordination</p>
+                <p>{getSection.items[3].description}</p>
               </div>
             </div>
           </motion.div>
@@ -142,6 +148,7 @@ export default function GetSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{
               duration: 0.6,
+              delay: 1,
               ease: "easeOut",
             }}
             viewport={{ once: true, amount: 0.2 }}
@@ -157,9 +164,9 @@ export default function GetSection() {
                 />
               </div>
               <div className="space-y-3 sm:space-y-5">
-                <h5 className="text-lg md:text-xl xl:text-[1.5rem] xl:leading-[2.1rem]">Full System Deployment</h5>
+                <h5 className="text-lg md:text-xl xl:text-[1.5rem] xl:leading-[2.1rem]">{getSection.items[4].title}</h5>
                 <div className="w-15.5 h-1 rounded-full bg-[#EDA509]"></div>
-                <p>Built directly into your environment</p>
+                <p>{getSection.items[4].description}</p>
               </div>
             </div>
           </motion.div>

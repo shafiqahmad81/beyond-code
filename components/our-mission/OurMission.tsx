@@ -3,14 +3,15 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import OurMissionImage from "../../assets/img/mission-image.png";
+import missionData from "@/data/en.json";
 
 export default function OurMission() {
+  const { mission } = missionData;
   return (
     <section id="about" className="bg-black py-16 text-white lg:py-32 overflow-hidden">
       <div className="container">
         <div className="flex flex-col items-center gap-9 md:flex-row">
-          
-          {/* Image - bottom to top */}
+
           <motion.div
             className="relative w-full max-w-189 group"
             initial={{ opacity: 0, y: 60 }}
@@ -27,7 +28,6 @@ export default function OurMission() {
             />
           </motion.div>
 
-          {/* Content - bottom to top */}
           <motion.div
             className="max-w-120.25 space-y-8"
             initial={{ opacity: 0, y: 60 }}
@@ -35,42 +35,55 @@ export default function OurMission() {
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
             viewport={{ once: true, amount: 0.3 }}
           >
-            {/* Who We Are */}
-            <div>
-              <h2 className="mb-3 text-2xl font-bold md:leading-[44.8px] sm:mb-5 md:text-[32px]">
-                Built for Institutional Environments
-              </h2>
-              <p className="text-base font-normal leading-[25.2px] text-[#B2B2B2] sm:text-lg">
-                Beyond Code builds operational intelligence systems that run inside real institutions.
-                
-              </p>
-            </div>
+            {mission.sections.map((section, index) => (
+              <div key={index} className="space-y-3">
 
-            {/* Our Mission */}
-            <div>
-              <h2 className="mb-3 text-2xl font-bold leading-[44.8px] sm:mb-5 md:text-[32px]">
-                Our Mission
-              </h2>
-              <p className="text-base font-normal leading-[25.2px] text-[#B2B2B2] sm:text-lg">
-                Close the gap between AI capability and real execution.
-              </p>
-            </div>
+                {/* Title */}
+                <motion.h2
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, ease: "easeOut" }}
+                  viewport={{ once: true }}
+                  className="text-2xl font-bold md:leading-[44.8px] sm:text-[32px]"
+                >
+                  {section.title}
+                </motion.h2>
 
-            {/* Our Approach */}
-            <div>
-              <h2 className="mb-3 text-2xl font-bold leading-[44.8px] sm:mb-5 md:text-[32px]">
-                Our Approach
-              </h2>
-              <p className="text-base font-normal leading-[25.2px] text-[#B2B2B2] sm:text-lg">
-                Systems are designed to align with:
-              </p>
-              <ul className="list-inside pl-3 list-disc text-base font-normal leading-[25.2px] text-[#B2B2B2] sm:text-lg">
-                <li>Institutional governance structures</li>
-                <li>Existing operational workflows</li>
-                <li>Reporting frameworks</li>
-                <li>Infrastructure environments</li>
-              </ul>
-            </div>
+                {/* Description */}
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
+                  viewport={{ once: true }}
+                  className="text-base font-normal leading-[25.2px] text-[#B2B2B2] sm:text-lg"
+                >
+                  {section.description}
+                </motion.p>
+
+                {/* List */}
+                {section.list && (
+                  <motion.ul
+                    initial={{ opacity: 0, y: 60 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                    viewport={{ once: true, amount: 0.3 }}
+                    className="list-inside pl-3 list-disc text-base font-normal leading-[25.2px] text-[#B2B2B2] sm:text-lg"
+                  >
+                    {section.list.map((item, i) => (
+                      <motion.li
+                        key={i}
+                        initial={{ opacity: 0, x: -10 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.4, ease: "easeOut" }}
+                        viewport={{ once: true }}
+                      >
+                        {item}
+                      </motion.li>
+                    ))}
+                  </motion.ul>
+                )}
+              </div>
+            ))}
           </motion.div>
         </div>
       </div>

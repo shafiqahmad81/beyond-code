@@ -6,37 +6,11 @@ import serviceImage1 from "../../assets/img/intelligence.svg";
 import serviceImage2 from "../../assets/img/operational.svg";
 import serviceImage3 from "../../assets/img/automation.svg";
 import serviceImage4 from "../../assets/img/custom-intelligence.svg";
-import ServiceCard from "./serviceCard";
 import Image from "next/image";
+import servicesData from "@/data/en.json";
 
 export default function Service() {
-
-  //   const services = [
-  //   {
-  //     image: serviceImage1,
-  //     title: "Intelligence & Predictive Systems",
-  //     description:
-  //       "Powered by LLM and machine learning systems, predictive analytics, and organizational knowledge intelligence.",
-  //   },
-  //   {
-  //     image: serviceImage2,
-  //     title: "Operational Intelligence Systems",
-  //     description:
-  //       "From real-time monitoring to intelligent dashboards and operational data insights - built for complete operational control.",
-  //   },
-  //   {
-  //     image: serviceImage3,
-  //     title: `Automation </br> Systems`,
-  //     description:
-  //       "From automated reporting to workflow automation and AI-powered assistants — built to streamline and scale operations.",
-  //   },
-  //   {
-  //     image: serviceImage4,
-  //     title: "Custom Intelligence Development",
-  //     description:
-  //       "Agentic AI systems, autonomous operational intelligence platforms, and custom enterprise system development.",
-  //   },
-  // ];
+  const { title, button, cards } = servicesData.services;
   return (
     <section id="services" className="py-7 md:py-14">
       <div className="container">
@@ -55,7 +29,7 @@ export default function Service() {
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
           >
-            Services & Expertise
+            {title}
           </motion.h2>
 
           {/* RIGHT BUTTON */}
@@ -66,7 +40,7 @@ export default function Service() {
             viewport={{ once: true }}
           >
             <Button
-              text="Contact us"
+              text={button}
               href="/contact-us"
             />
           </motion.div>
@@ -77,6 +51,7 @@ export default function Service() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{
               duration: 0.6,
+              delay: 0,
               ease: "easeOut",
             }}
             viewport={{ once: true, amount: 0.2 }}
@@ -92,9 +67,9 @@ export default function Service() {
                 />
               </div>
               <div className="space-y-3 sm:space-y-5">
-                <h5>Intelligence & Predictive Systems</h5>
+                <h5>{cards[0].title}</h5>
                 <div className="w-15.5 h-1 rounded-full bg-linear-to-r from-[#7545F3] to-[#FCE172]"></div>
-                <p>Make decisions faster with built-in intelligence</p>
+                <p>{cards[0].description}</p>
               </div>
             </div>
           </motion.div>
@@ -103,6 +78,7 @@ export default function Service() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{
               duration: 0.6,
+              delay: 0.2,
               ease: "easeOut",
             }}
             viewport={{ once: true, amount: 0.2 }}
@@ -118,9 +94,9 @@ export default function Service() {
                 />
               </div>
               <div className="space-y-3 sm:space-y-5">
-                <h5>Operational Intelligence Systems</h5>
+                <h5>{cards[1].title}</h5>
                 <div className="w-15.5 h-1 rounded-full bg-linear-to-r from-[#7545F3] to-[#FCE172]"></div>
-                <p>See what’s happening across your operations in real time</p>
+                <p>{cards[1].description}</p>
               </div>
             </div>
           </motion.div>
@@ -129,6 +105,7 @@ export default function Service() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{
               duration: 0.6,
+              delay: 0.4,
               ease: "easeOut",
             }}
             viewport={{ once: true, amount: 0.2 }}
@@ -144,9 +121,9 @@ export default function Service() {
                 />
               </div>
               <div className="space-y-3 sm:space-y-5">
-                <h5>Automation <br /> Systems</h5>
+                <h5>{cards[2].title}</h5>
                 <div className="w-15.5 h-1 rounded-full bg-linear-to-r from-[#7545F3] to-[#FCE172]"></div>
-                <p>Remove manual work from core processes</p>
+                <p>{cards[2].description}</p>
               </div>
             </div>
           </motion.div>
@@ -155,6 +132,7 @@ export default function Service() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{
               duration: 0.6,
+              delay: 0.6,
               ease: "easeOut",
             }}
             viewport={{ once: true, amount: 0.2 }}
@@ -170,9 +148,9 @@ export default function Service() {
                 />
               </div>
               <div className="space-y-3 sm:space-y-5">
-                <h5>Custom Intelligence Development</h5>
+                <h5>{cards[3].title}</h5>
                 <div className="w-15.5 h-1 rounded-full bg-linear-to-r from-[#7545F3] to-[#FCE172]"></div>
-                <p>Built around how your organization actually operates</p>
+                <p>{cards[3].description}</p>
               </div>
             </div>
           </motion.div>
