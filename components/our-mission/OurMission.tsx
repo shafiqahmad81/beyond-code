@@ -1,12 +1,22 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useMessages } from "next-intl"
 import Image from "next/image";
 import OurMissionImage from "../../assets/img/mission-image.png";
-import missionData from "@/data/en.json";
 
 export default function OurMission() {
-  const { mission } = missionData;
+
+   const messages = useMessages();
+
+   const mission = messages.mission as {
+    sections: {
+      title: string;
+      description: string;
+      list?: string[];
+    }[];
+  };
+
   return (
     <section id="about" className="bg-black py-16 text-white lg:py-32 overflow-hidden">
       <div className="container">
@@ -35,7 +45,7 @@ export default function OurMission() {
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
             viewport={{ once: true, amount: 0.3 }}
           >
-            {mission.sections.map((section, index) => (
+             {mission.sections.map((section, index) => (
               <div key={index} className="space-y-3">
 
                 {/* Title */}

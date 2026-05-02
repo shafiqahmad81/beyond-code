@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Open_Sans, Inter } from "next/font/google";
 import "./globals.css";
+import { NextIntlClientProvider } from 'next-intl';
 
 const openSans = Open_Sans({
   subsets: ["latin"],
@@ -39,7 +40,11 @@ export default function RootLayout({
       lang="en"
       className={`${openSans.variable} ${inter.variable} h-full antialiased`}
     >
-      <body className="min-h-full">{children}</body>
+      <body className="min-h-full">
+        <NextIntlClientProvider>
+          {children}
+        </NextIntlClientProvider>
+        </body>
     </html>
   );
 }

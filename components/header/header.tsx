@@ -5,57 +5,75 @@ import type { MouseEvent } from "react";
 import { Menu, X, Globe, ArrowRight } from "lucide-react";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
+
 import GradientButton from "../button/GradientButton";
 import WithoutContentButton from "../button/withoutContentButton";
-import data from "@/data/en.json";
+import { useLocale } from "next-intl";
 
 export default function Header() {
-    const navItems = data.header[0].navItems;
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
     const [activeSection, setActiveSection] = useState("");
 
     const pathname = usePathname();
+    const locale = useLocale();
 
-    useEffect(() => {
-    const handleScroll = () => {
-        const scrollY = window.scrollY;
-
-        setScrolled(scrollY > 50);
-
-        if (scrollY < 100) {
-            setActiveSection("");
-            return;
-        }
-
-        let current = "";
-
-        navItems.forEach((item) => {
-            const id = item.target.replace("#", "");
-            const el = document.getElementById(id);
-
-            if (!el) return;
-
-            const rect = el.getBoundingClientRect();
-
-            if (
-                rect.top <= window.innerHeight / 2 &&
-                rect.bottom >= window.innerHeight / 2
-            ) {
-                current = id;
-            }
-        });
-
-        if (current) {
-            setActiveSection(current);
-        }
+    const toggleLocale = () => {
+        const newLocale = locale === "en" ? "ar" : "en";
+        document.cookie = `locale=${newLocale}; path=/`;
+        window.location.reload();
     };
 
-    window.addEventListener("scroll", handleScroll);
-    handleScroll();
+    const navItems = [
+        { label: "About", href: "/#about", target: "#about" },
+        { label: "Why Us", href: "/#why-us", target: "#why-us" },
+        { label: "Systems", href: "/#systems", target: "#systems" },
+        { label: "Services", href: "/#services", target: "#services" },
+        { label: "Technology", href: "/#technology", target: "#technology" },
+        { label: "Process", href: "/#process", target: "#process" },
+        { label: "Case Study", href: "/case-study", target: "#case-study" },
+        { label: "Contact", href: "/contact-us", target: "#contact-us" },
+    ];
 
-    return () => window.removeEventListener("scroll", handleScroll);
-}, []);
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollY = window.scrollY;
+
+            setScrolled(scrollY > 50);
+
+            if (scrollY < 100) {
+                setActiveSection("");
+                return;
+            }
+
+            let current = "";
+
+            navItems.forEach((item) => {
+                const id = item.target.replace("#", "");
+                const el = document.getElementById(id);
+
+                if (!el) return;
+
+                const rect = el.getBoundingClientRect();
+
+                if (
+                    rect.top <= window.innerHeight / 2 &&
+                    rect.bottom >= window.innerHeight / 2
+                ) {
+                    current = id;
+                }
+            });
+
+            if (current) {
+                setActiveSection(current);
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        handleScroll();
+
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
     const smoothScroll = (e: MouseEvent<HTMLElement>, id: string) => {
         if (id.startsWith("/#")) {
@@ -84,11 +102,10 @@ export default function Header() {
 
     return (
         <header
-            className={`w-full fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out ${
-                scrolled
+            className={`w-full fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out ${scrolled
                     ? "bg-[#1A1A1A]/20 backdrop-blur-lg"
                     : "bg-transparent"
-            }`}
+                }`}
         >
             <div className="mx-auto max-w-368 px-4 py-4 sm:py-6 lg:pt-8.5">
 
@@ -122,11 +139,10 @@ export default function Header() {
                                     <Link
                                         key={item.label}
                                         href={item.href}
-                                        className={`text-sm font-semibold transition xl:text-base xl:leading-6 hover:text-white/70 ${
-                                            isActive
+                                        className={`text-sm font-semibold transition xl:text-base xl:leading-6 hover:text-white/70 ${isActive
                                                 ? "text-white/70"
                                                 : "text-white"
-                                        }`}
+                                            }`}
                                     >
                                         {item.label}
                                     </Link>
@@ -136,11 +152,10 @@ export default function Header() {
                                         onClick={(e) =>
                                             smoothScroll(e, item.target)
                                         }
-                                        className={`text-sm font-semibold transition xl:text-base xl:leading-6 hover:text-white/70 ${
-                                            isActive
+                                        className={`text-sm font-semibold transition xl:text-base xl:leading-6 hover:text-white/70 ${isActive
                                                 ? "text-white/70"
                                                 : "text-white"
-                                        }`}
+                                            }`}
                                     >
                                         {item.label}
                                     </button>
@@ -151,35 +166,45 @@ export default function Header() {
                         {/* RIGHT */}
                         <div className="flex items-center gap-4">
 
+                            {/* LANGUAGE SWITCH */}
                             <div className="flex items-center gap-2.5">
-                                <button className="text-sm font-semibold text-white">
+
+                                <button
+                                    type="button"
+                                    onClick={toggleLocale}
+                                    className={`text-sm font-semibold transition ${locale === "en" ? "text-white" : "text-white/50 cursor-pointer"
+                                        }`}
+                                >
                                     EN
                                 </button>
 
-                                <Globe className="h-4 sm:h-6 w-4 sm:w-6 text-white cursor-pointer" />
+                                <Globe className="h-4 sm:h-6 w-4 sm:w-6 text-white" />
 
-                                <button className="text-sm font-semibold text-white">
+                                <button
+                                    type="button"
+                                    onClick={toggleLocale}
+                                    className={`text-sm font-semibold transition ${locale === "ar" ? "text-white" : "text-white/50"
+                                        }`}
+                                >
                                     AR
                                 </button>
                             </div>
 
+                            {/* CTA BUTTON */}
                             <div className="hidden xl:block">
-                                <GradientButton
-                                    text="Request a Consultation"
-                                />
+                                <GradientButton text="Request a Consultation" />
                             </div>
 
+                            {/* ICON BUTTON */}
                             <div className="hidden lg:block xl:hidden">
-                                <WithoutContentButton
-                                    icon={<ArrowRight className="h-4 w-4" />}
-                                />
+                                <WithoutContentButton icon={<ArrowRight className="h-4 w-4" />} />
                             </div>
 
+                            {/* MOBILE MENU TOGGLE */}
                             <button
-                                className="flex lg:hidden items-center justify-center p-2 rounded-full text-white hover:bg-white/10 transition"
-                                onClick={() =>
-                                    setMobileMenuOpen(!mobileMenuOpen)
-                                }
+                                type="button"
+                                className="flex lg:hidden items-center justify-center p-2 rounded-full text-white hover:bg-white/10 transition cursor-pointer"
+                                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                             >
                                 {mobileMenuOpen ? (
                                     <X className="h-6 w-6" />
@@ -187,7 +212,9 @@ export default function Header() {
                                     <Menu className="h-6 w-6" />
                                 )}
                             </button>
+
                         </div>
+
                     </div>
                 </div>
 
@@ -207,11 +234,10 @@ export default function Header() {
                                     key={item.label}
                                     href={item.href}
                                     onClick={() => setMobileMenuOpen(false)}
-                                    className={`transition hover:text-white/70 ${
-                                        isActive
+                                    className={`transition hover:text-white/70 ${isActive
                                             ? "text-white/70"
                                             : "text-white"
-                                    }`}
+                                        }`}
                                 >
                                     {item.label}
                                 </Link>
@@ -221,11 +247,10 @@ export default function Header() {
                                     onClick={(e) =>
                                         smoothScroll(e, item.target)
                                     }
-                                    className={`text-left transition hover:text-white/70 ${
-                                        isActive
+                                    className={`text-left transition hover:text-white/70 ${isActive
                                             ? "text-white/70"
                                             : "text-white"
-                                    }`}
+                                        }`}
                                 >
                                     {item.label}
                                 </button>

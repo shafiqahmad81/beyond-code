@@ -5,10 +5,17 @@ import GradientButton from "../button/GradientButton";
 import SystemCard from "./systemCard";
 import learnImage from "../../assets/img/our-cor.png";
 import Image from "next/image";
-import coreData from "@/data/en.json";
+import { useTranslations } from "next-intl";
 
 export default function OurCore() {
-  const { title, button, systems, whatChanges } = coreData.core;
+  const core = useTranslations("core");
+
+  const systems = core.raw("systems") as any[];
+  const whatChanges = core.raw("whatChanges") as {
+    title: string;
+    items: string[];
+  };
+
   return (
     <section id="systems" className="py-7 md:py-14 overflow-hidden">
       <div className="container">
@@ -21,7 +28,7 @@ export default function OurCore() {
             transition={{ duration: 0.6, ease: "easeOut" }}
             viewport={{ once: true }}
           >
-            {title}
+            {core("title")}
           </motion.h2>
 
           {/* BUTTON */}
@@ -31,9 +38,7 @@ export default function OurCore() {
             transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
             viewport={{ once: true }}
           >
-            <GradientButton
-              text={button}
-            />
+            <GradientButton text={core("button")} />
           </motion.div>
         </div>
 
@@ -46,7 +51,7 @@ export default function OurCore() {
 
           <div className="grid gap-5 sm:grid-cols-2">
 
-            {systems.map((system, index) => (
+             {systems.map((system: any, index: number) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 80 }}

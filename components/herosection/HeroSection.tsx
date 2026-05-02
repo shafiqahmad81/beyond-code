@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl"
 import heroBgTop from "../../assets/img/banner-bg-top.svg";
 import heroBg from "../../assets/img/banner-bg.jpg";
 import Button from "../button/button";
@@ -9,11 +10,8 @@ import fasterIcon from "../../assets/img/faster.svg";
 import lessIcon from "../../assets/img/less.svg";
 import realIcon from "../../assets/img/real-time.svg";
 import StatItem from "../card/featureCard";
-import heroData from "@/data/en.json";
 export default function HeroSection() {
-
-    const { hero } = heroData;
-        
+    const t = useTranslations("hero");  
 
     return (
         <section className="mt-26">
@@ -38,10 +36,16 @@ export default function HeroSection() {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.7 }}
                         >
-                            {/* Operational <span className="text-[#FF09F4]"> Intelligence </span>for Institutional Systems */}
-                            {hero.title.text.split(hero.title.highlight)[0]}
-                                <span className="text-[#FF09F4]">{hero.title.highlight}</span>
-                            {hero.title.text.split(hero.title.highlight)[1]}
+                            {t("title.text")
+                                .split(t("title.highlight"))[0]}
+
+                            <span className="text-[#FF09F4]">
+                                {t("title.highlight")}
+                            </span>
+
+                            {t("title.text")
+                                .split(t("title.highlight"))[1]}
+
                         </motion.h1>
 
                         <motion.div
@@ -62,7 +66,7 @@ export default function HeroSection() {
                             className="text-[#B2B2B2]"
                             >
                             {/* Run your operations. Not just your reports. */}
-                            {hero.subtitle}
+                            {t("subtitle")}
                         </motion.h5>
 
                         <motion.p
@@ -72,7 +76,7 @@ export default function HeroSection() {
                             className="text-lg sm:text-xl leading-7.5 font-normal text-[#B2B2B2] mt-7 max-w-224.5"
                         >
                             {/* Systems that connect execution, reporting, and decision-making in one controlled layer. */}
-                            {hero.description}
+                            {t("description")}
                         </motion.p>
                         <motion.div
                             initial={{ opacity: 0, y: 50 }}
@@ -81,22 +85,17 @@ export default function HeroSection() {
                             className="mt-10 flex flex-wrap items-center gap-4"
                         >
                             <div>
-                                <GradientBgWhite 
-                                    text={hero.buttons.primary}
-                                />
+                                <GradientBgWhite text={t("buttons.primary")} />
                             </div>
 
-                            <Button
-                                text={hero.buttons.secondary}
-                                href="#"
-                            />
+                            <Button text={t("buttons.secondary")} href="#" />
                         </motion.div>
                     </div>
                 </div>
                 <div className="container mt-16 sm:mt-20 md:mt-24 lg:mt-30">
                     <div className="w-full max-w-186.25 flex items-center justify-between flex-wrap gap-4">
                         
-                        {hero.stats.map((item, index) => (
+                        {t.raw("stats").map((item: any, index: number) => (
                             <motion.div
                                 key={index}
                                 initial={{ opacity: 0, y: 40 }}
@@ -126,4 +125,3 @@ export default function HeroSection() {
         </section>
     );
 }
-
