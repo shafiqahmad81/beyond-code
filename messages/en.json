@@ -47,8 +47,9 @@
   ],
   "hero": {
     "title": {
-      "text": "Operational Intelligence for Institutional Systems",
-      "highlight": "Intelligence"
+      "before": "Operational ",
+      "highlight": "Intelligence",
+      "after": " for Institutional Systems"
     },
     "subtitle": "Run your operations. Not just your reports.",
     "description": "Systems that connect execution, reporting, and decision-making in one controlled layer",
@@ -434,7 +435,8 @@
       "privacy": "Privacy Policy",
       "terms": "Terms of Use",
       "copyright": "© 2026 Beyond Code. All rights reserved."
-    }
+    },
+    "brandName": "Beyond Code"
   },
 
   "contact": {

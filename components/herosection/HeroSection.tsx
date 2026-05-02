@@ -36,15 +36,13 @@ export default function HeroSection() {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.7 }}
                         >
-                            {t("title.text")
-                                .split(t("title.highlight"))[0]}
+                            {t("title.before")}
 
                             <span className="text-[#FF09F4]">
                                 {t("title.highlight")}
                             </span>
 
-                            {t("title.text")
-                                .split(t("title.highlight"))[1]}
+                            {t("title.after")}
 
                         </motion.h1>
 
@@ -65,7 +63,6 @@ export default function HeroSection() {
                             transition={{ duration: 1.1, ease: "easeOut" }}
                             className="text-[#B2B2B2]"
                             >
-                            {/* Run your operations. Not just your reports. */}
                             {t("subtitle")}
                         </motion.h5>
 
@@ -75,7 +72,6 @@ export default function HeroSection() {
                             transition={{ delay: 0.2, duration: 0.7 }}
                             className="text-lg sm:text-xl leading-7.5 font-normal text-[#B2B2B2] mt-7 max-w-224.5"
                         >
-                            {/* Systems that connect execution, reporting, and decision-making in one controlled layer. */}
                             {t("description")}
                         </motion.p>
                         <motion.div

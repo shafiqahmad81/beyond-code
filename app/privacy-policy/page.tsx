@@ -1,12 +1,37 @@
 import Link from "next/link";
+import data from "@/data/en.json";
 
 
 export default function PrivacyPolicy() {
+    type SubSection = {
+        title: string;
+        content?: string;
+        list?: string[];
+        note?: string;
+    };
+
+    type Section = {
+        title: string;
+        content?: string | string[];
+        intro?: string;
+        list?: string[];
+        subSections?: SubSection[];
+        note?: string;
+        email?: string;
+    };
+
+    type Privacy = {
+        title: string;
+        lastUpdated: string;
+        description: string;
+        sections: Section[];
+    };
+    const privacy: Privacy = data.privacy;
     return (
         <>
             <section className="pt-30 sm:pt-40 lg:pt-50 pb-8 sm:pb-16 lg:pb-32.5">
                 <div className="container">
-                    <div className="w-full max-w-312.75 mx-auto space-y-4 sm:space-y-7.5">
+                    {/* <div className="w-full max-w-312.75 mx-auto space-y-4 sm:space-y-7.5">
                         <div>
                             <h1 className="text-3xl md:text-4xl lg:text-5xl leading-14 mb-2.5 sm:mb-5 text-white">Privacy Policy</h1>
                             <p>Last updated: 01 Februay 2026</p>
@@ -157,6 +182,90 @@ export default function PrivacyPolicy() {
                             <p>Email: <Link href="mailto:info@beyondcode.ae">info@beyondcode.ae</Link></p>
                             
                         </div>
+                    </div> */}
+                    <div className="w-full max-w-312.75 mx-auto space-y-4 sm:space-y-7.5">
+
+                        {/* HEADER */}
+                        <div>
+                            <h1 className="text-3xl md:text-4xl lg:text-5xl leading-14 mb-2.5 sm:mb-5 text-white">
+                                {privacy.title}
+                            </h1>
+                            <p>Last updated: {privacy.lastUpdated}</p>
+                            <p>{privacy.description}</p>
+                        </div>
+
+                        {privacy.sections.map((section, index) => (
+                            <div key={index}>
+
+                                <h5>{section.title}</h5>
+
+                                {/* simple content */}
+                                {section.content && typeof section.content === "string" && (
+                                    <p className="mt-4">{section.content}</p>
+                                )}
+
+                                {/* multiple paragraph */}
+                                {Array.isArray(section.content) &&
+                                    section.content.map((para, i) => (
+                                        <p key={i} className="mt-3 sm:mt-4">{para}</p>
+                                    ))}
+
+                                {/* intro */}
+                                {section.intro && (
+                                    <p className="my-4">{section.intro}</p>
+                                )}
+
+                                {/* LIST */}
+                                {section.list && (
+                                    <ul className="list-disc pl-6 mt-1">
+                                        {section.list.map((item, i) => (
+                                            <li key={i}>{item}</li>
+                                        ))}
+                                    </ul>
+                                )}
+
+                                {/* SUB SECTIONS */}
+                                {section.subSections &&
+                                    section.subSections.map((sub, i) => (
+                                        <div key={i}>
+                                            <h6 className="text-base sm:text-lg sm:leading-6.5 text-white font-semibold my-3 sm:my-4">
+                                                {sub.title}
+                                            </h6>
+
+                                            {sub.content && (
+                                                <p className="my-3 sm:my-4">{sub.content}</p>
+                                            )}
+
+                                            {sub.list && (
+                                                <ul className="list-disc pl-6 mt-1">
+                                                    {sub.list.map((item, j) => (
+                                                        <li key={j}>{item}</li>
+                                                    ))}
+                                                </ul>
+                                            )}
+
+                                            {sub.note && (
+                                                <p className="mt-3 sm:mt-4">{sub.note}</p>
+                                            )}
+                                        </div>
+                                    ))}
+
+                                {/* NOTE */}
+                                {section.note && (
+                                    <p className="mt-3 sm:mt-4">{section.note}</p>
+                                )}
+
+                                {/* EMAIL */}
+                                {section.email && (
+                                    <p>
+                                        Email:{" "}
+                                        <Link href={`mailto:${section.email}`}>
+                                            {section.email}
+                                        </Link>
+                                    </p>
+                                )}
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>

@@ -183,7 +183,7 @@ export default function Header() {
                                 <button
                                     type="button"
                                     onClick={toggleLocale}
-                                    className={`text-sm font-semibold transition ${locale === "ar" ? "text-white" : "text-white/50"
+                                    className={`text-sm font-semibold transition ${locale === "ar" ? "text-white" : "text-white/50 cursor-pointer"
                                         }`}
                                 >
                                     AR

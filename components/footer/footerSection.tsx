@@ -49,7 +49,6 @@ export default function Footer() {
                             >
                                 {footer.hero.titlePart} <span className="bg-[linear-gradient(90deg,#FF09F4_0%,#00D1FF_100%)] bg-clip-text text-transparent">{footer.hero.titleHighlight}</span>
                             </motion.h3>
-                            {/* <p className="text-sm sm:text-lg font-normal sm:leading-6 text-[#FFFFFF]">Test the system in your environment before scaling.</p> */}
 
                             <motion.p
                                 initial={{ opacity: 0, y: 20 }}
@@ -136,7 +135,7 @@ export default function Footer() {
                                 transition={{ duration: 0.5, ease: "easeOut" }}
                                 viewport={{ once: true, amount: 0.3 }}
                             >
-                                <Link href="/">Beyond Code</Link>
+                                <Link href="/">{footer.brandName}</Link>
                             </motion.h4>
 
                             <motion.p
